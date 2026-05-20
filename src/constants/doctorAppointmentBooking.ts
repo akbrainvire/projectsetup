@@ -1,0 +1,55 @@
+import { SITE_COLORS } from "@/utility/strings";
+
+export const DOCTOR_APPOINTMENT_BOOKING_DATE_FORMAT = "YYYY-MM-DD";
+
+export const DOCTOR_APPOINTMENT_BOOKING_SLOT_TIME_FORMAT = "HH:mm";
+
+export const DOCTOR_APPOINTMENT_BOOKING_SELECTION_DATE_FORMAT = "MMM D";
+
+export const DOCTOR_APPOINTMENT_BOOKING_SLOT_PERIODS = {
+  MORNING: "morning",
+  AFTERNOON: "afternoon",
+  EVENING: "evening",
+} as const;
+
+export const DOCTOR_APPOINTMENT_BOOKING_PERIOD_ORDER = [
+  DOCTOR_APPOINTMENT_BOOKING_SLOT_PERIODS.MORNING,
+  DOCTOR_APPOINTMENT_BOOKING_SLOT_PERIODS.AFTERNOON,
+  DOCTOR_APPOINTMENT_BOOKING_SLOT_PERIODS.EVENING,
+] as const;
+
+export const DOCTOR_APPOINTMENT_BOOKING_TRANSLATION_KEYS = {
+  AVAILABLE_SLOTS_TITLE: "doctorBooking.slots.title",
+  MORNING_TITLE: "doctorBooking.slots.morning",
+  AFTERNOON_TITLE: "doctorBooking.slots.afternoon",
+  EVENING_TITLE: "doctorBooking.slots.evening",
+  SELECTED_TIME_LABEL: "doctorBooking.footer.selectedTime",
+  BOOK_APPOINTMENT_LABEL: "doctorBooking.footer.bookAppointment",
+  NO_SLOTS_MESSAGE: "doctorBooking.slots.noSlots",
+  SELECT_DATE_MESSAGE: "doctorBooking.slots.selectDate",
+  EMPTY_SELECTION: "doctorBooking.footer.empty",
+  PREVIOUS_MONTH: "doctorBooking.calendar.previousMonth",
+  NEXT_MONTH: "doctorBooking.calendar.nextMonth",
+} as const;
+
+export const DOCTOR_APPOINTMENT_BOOKING_COLORS = {
+  PANEL_BACKGROUND: SITE_COLORS.PAGE_MUTED,
+  CARD_BACKGROUND: SITE_COLORS.WHITE,
+  BORDER: SITE_COLORS.GREY_6,
+  TEXT_PRIMARY: SITE_COLORS.TEXT_PRIMARY,
+  TEXT_MUTED: SITE_COLORS.GREY_4,
+  TEXT_FADED: SITE_COLORS.PLACEHOLDER_GREY,
+  PRIMARY: SITE_COLORS.NAVY_DARK,
+  PRIMARY_HOVER: SITE_COLORS.BLUE_DEEP,
+  AVAILABLE_BORDER: SITE_COLORS.NAVY_DARK,
+  SLOT_BORDER: SITE_COLORS.GREY_5,
+} as const;
+
+export const DOCTOR_APPOINTMENT_BOOKING_DEFAULTS = {
+  BORDER_RADIUS: "12px",
+  CARD_PADDING: "16px",
+  SLOT_GAP: "8px",
+  SECTION_GAP: "16px",
+  CALENDAR_CELL_SIZE: "36px",
+} as const;
+

@@ -1,0 +1,43 @@
+export const DOCTOR_APPOINTMENT_CARD_GRADIENT =
+  "linear-gradient(98.37deg, #00AA9B 1.29%, rgba(148, 237, 252, 0.3) 211.21%)";
+
+export const DOCTOR_APPOINTMENT_CARD_DEFAULTS = {
+  BORDER_RADIUS: "12px",
+  MAX_WIDTH: "416px",
+  PADDING: "16px",
+  AVATAR_SIZE: 56,
+  AVATAR_SIZE_OPTIMIZED: 128,
+  GAP_NAME_META: "4px",
+  GAP_SECTIONS: "10px",
+  GAP_AVATAR_INFO: "14px",
+  GAP_APPOINTMENT_LINES: "4px",
+  GAP_BOTTOM_ROW: "16px",
+  DIVIDER_COLOR: "rgba(255, 255, 255, 0.28)",
+} as const;
+
+export const DOCTOR_APPOINTMENT_CARD_TYPOGRAPHY = {
+  DOCTOR_NAME: {
+    FONT_SIZE: "16px",
+    FONT_WEIGHT: "600",
+    LINE_HEIGHT: "1.2",
+  },
+  DOCTOR_META: {
+    FONT_SIZE: "14px",
+    FONT_WEIGHT: "400",
+    LINE_HEIGHT: "1.25",
+  },
+  APPOINTMENT_LINE: {
+    FONT_SIZE: "14px",
+    FONT_WEIGHT: "600",
+    LINE_HEIGHT: "1.25",
+  },
+  ACTION_BUTTON: {
+    FONT_SIZE: "12px",
+    FONT_WEIGHT: "600",
+    LINE_HEIGHT: "100%",
+    BORDER_RADIUS: "8px",
+    PADDING: "8px 16px",
+    HEIGHT: "32px",
+    MIN_WIDTH: "82px",
+  },
+} as const;

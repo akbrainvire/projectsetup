@@ -1,0 +1,55 @@
+export const CONSULTATION_FEE_CARD_DEFAULTS = {
+  WIDTH: "416px",
+  PADDING: "16px",
+  BORDER_RADIUS: "16px",
+  BORDER_WIDTH: "1px",
+  STACK_GAP: "16px",
+  TOP_SECTION_GAP: "12px",
+  ROW_GAP: "12px",
+  DEDUCTIBLE_PADDING: "12px 16px",
+  DEDUCTIBLE_BORDER_RADIUS: "12px",
+  DEDUCTIBLE_TEXT_GAP: "2px",
+  INSURANCE_LABEL_GAP: "8px",
+  BUTTON_BORDER_RADIUS: "10px",
+  BUTTON_PADDING: "14px 16px",
+  BUTTON_FONT_SIZE: "14px",
+  BUTTON_FONT_WEIGHT: "600",
+} as const;
+
+export const CONSULTATION_FEE_CARD_TYPOGRAPHY = {
+  TOTAL_LABEL: {
+    FONT_SIZE: "15px",
+    FONT_WEIGHT: "600",
+    LINE_HEIGHT: "1.3",
+  },
+  TOTAL_AMOUNT: {
+    FONT_SIZE: "16px",
+    FONT_WEIGHT: "700",
+    LINE_HEIGHT: "1.3",
+  },
+  INSURANCE_LABEL: {
+    FONT_SIZE: "14px",
+    FONT_WEIGHT: "600",
+    LINE_HEIGHT: "1.3",
+  },
+  INSURANCE_AMOUNT: {
+    FONT_SIZE: "14px",
+    FONT_WEIGHT: "700",
+    LINE_HEIGHT: "1.3",
+  },
+  DEDUCTIBLE_TITLE: {
+    FONT_SIZE: "15px",
+    FONT_WEIGHT: "700",
+    LINE_HEIGHT: "1.3",
+  },
+  DEDUCTIBLE_SUBTITLE: {
+    FONT_SIZE: "12px",
+    FONT_WEIGHT: "400",
+    LINE_HEIGHT: "1.3",
+  },
+  DEDUCTIBLE_AMOUNT: {
+    FONT_SIZE: "18px",
+    FONT_WEIGHT: "700",
+    LINE_HEIGHT: "1.3",
+  },
+} as const;

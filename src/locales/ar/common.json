@@ -1,0 +1,115 @@
+{
+  "app": {
+    "title": "UP DCS",
+    "welcome": "مرحباً",
+    "reduxState": "شريحة Redux المشتركة: {{status}}"
+  },
+  "errors": {
+    "thisFieldIsRequired": "هذا الحقل مطلوب"
+  },
+  "layout": {
+    "product": "UP-DCS",
+    "navHome": "الرئيسية",
+    "navExg": "EXG",
+    "contact": "اتصل بنا",
+    "footer": "UP-DCS",
+    "language": "اللغة"
+  },
+  "home": {
+    "title": "الرئيسية",
+    "description": "هيكل Next.js بسيط.",
+    "exgLink": "فتح EXG (قائمة، RTL، نموذج التفاصيل)",
+    "buttons": {
+      "title": "أنماط الأزرار",
+      "primary": "إجراء أساسي",
+      "secondary": "بدء مكالمة فيديو",
+      "custom": "إجراء مخصص"
+    }
+  },
+  "language": {
+    "english": "الإنجليزية",
+    "arabic": "العربية",
+    "inSelectorEnglish": "English",
+    "inSelectorArabic": "العربية"
+  },
+  "exg": {
+    "brand": "EXG",
+    "nav": {
+      "home": "الرئيسية",
+      "exg": "EXG"
+    },
+    "header": {
+      "subtitle": "ListingLayout + جدول Ant Design"
+    },
+    "footer": "تذييل تجربة EXG",
+    "list": {
+      "title": "الدليل",
+      "titleBar": "EXG / الدليل",
+      "reset": "إعادة ضبط",
+      "filter": "عوامل التصفية",
+      "add": "إضافة",
+      "searchPlaceholder": "بحث بالاسم أو البريد"
+    },
+    "table": {
+      "name": "الاسم",
+      "email": "البريد",
+      "role": "الدور",
+      "actionView": "عرض"
+    },
+    "detail": {
+      "title": "سجل",
+      "titleBar": "EXG / سجل",
+      "back": "العودة إلى القائمة",
+      "footer": "إجراءات التفاصيل",
+      "missing": "لا يوجد صف يطابق هذا المعرّف."
+    },
+    "form": {
+      "name": "الاسم",
+      "email": "البريد",
+      "role": "الدور"
+    }
+  },
+  "auth": {
+    "signIn": {
+      "title": "تسجيل الدخول"
+    }
+  },
+  "meetings": {
+    "list": {
+      "title": "الاجتماعات"
+    }
+  },
+  "discountCode": {
+    "placeholder": "أدخل رمز الخصم",
+    "actions": {
+      "apply": "تطبيق",
+      "applied": "تم التطبيق",
+      "remove": "إزالة"
+    },
+    "errors": {
+      "invalid": "رمز الخصم الذي أدخلته غير صالح. يرجى المحاولة مرة أخرى."
+    }
+  },
+  "doctorBooking": {
+    "calendar": {
+      "previousMonth": "الشهر السابق",
+      "nextMonth": "الشهر التالي"
+    },
+    "slots": {
+      "title": "المواعيد المتاحة",
+      "morning": "صباحاً",
+      "afternoon": "بعد الظهر",
+      "evening": "مساءً",
+      "noSlots": "لا توجد مواعيد متاحة لهذا التاريخ.",
+      "selectDate": "اختر تاريخاً لعرض المواعيد المتاحة."
+    },
+    "footer": {
+      "selectedTime": "الوقت المختار",
+      "bookAppointment": "حجز موعد",
+      "empty": "—"
+    },
+    "errors": {
+      "slotInPast": "لقد انقضى الوقت المختار. يرجى اختيار موعد جديد."
+    }
+  }
+}

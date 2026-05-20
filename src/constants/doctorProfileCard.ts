@@ -1,0 +1,64 @@
+export const DOCTOR_PROFILE_CARD_COLORS = {
+  NAME: "#464646",
+  DESIGNATION: "#208ccc",
+  LANGUAGE: "#737373",
+  EXPERIENCE: "#464646",
+  PRICE: "#464646",
+  PRICE_SUFFIX: "#737373",
+  BORDER: "#e8e8e8",
+  AVAILABLE_BADGE_BG: "#e8f8f6",
+  AVAILABLE_BADGE_TEXT: "#00aa9b",
+  AVAILABLE_DOT: "#00aa9b",
+  UNAVAILABLE_BADGE_BG: "#fdecec",
+  UNAVAILABLE_BADGE_TEXT: "#d14343",
+  UNAVAILABLE_DOT: "#d14343",
+  STATUS_DOT_BORDER: "#ffffff",
+} as const;
+
+export const DOCTOR_PROFILE_CARD_DEFAULTS = {
+  CURRENCY: "SAR",
+  BORDER_RADIUS: "16px",
+  AVATAR_BORDER_RADIUS: "12px",
+  PADDING: "16px",
+  MAX_WIDTH: "416px",
+  AVATAR_SIZE: 80,
+  AVATAR_SIZE_OPTIMIZED: 160,
+  GAP: "12px",
+  CONTENT_GAP: "4px",
+  STATUS_DOT_SIZE: 10,
+  UNAVAILABLE_OPACITY: 0.6,
+  CONSULTATION_SUFFIX: "/ Consultation",
+} as const;
+
+export const DOCTOR_PROFILE_CARD_LABELS = {
+  AVAILABLE: "Available",
+  UNAVAILABLE: "Unavailable",
+} as const;
+
+export const DOCTOR_PROFILE_CARD_TYPOGRAPHY = {
+  NAME: {
+    FONT_SIZE: "16px",
+    FONT_WEIGHT: "600",
+    LINE_HEIGHT: "100%",
+  },
+  DESIGNATION: {
+    FONT_SIZE: "14px",
+    FONT_WEIGHT: "400",
+    LINE_HEIGHT: "120%",
+  },
+  META: {
+    FONT_SIZE: "14px",
+    FONT_WEIGHT: "400",
+    LINE_HEIGHT: "120%",
+  },
+  PRICE: {
+    FONT_SIZE: "14px",
+    FONT_WEIGHT: "600",
+    LINE_HEIGHT: "100%",
+  },
+  BADGE: {
+    FONT_SIZE: "12px",
+    FONT_WEIGHT: "500",
+    LINE_HEIGHT: "100%",
+  },
+} as const;

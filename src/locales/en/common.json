@@ -1,0 +1,115 @@
+{
+  "app": {
+    "title": "UP DCS",
+    "welcome": "Welcome",
+    "reduxState": "Redux common slice: {{status}}"
+  },
+  "errors": {
+    "thisFieldIsRequired": "This field is required"
+  },
+  "layout": {
+    "product": "UP-DCS",
+    "navHome": "Home",
+    "navExg": "EXG",
+    "contact": "Contact",
+    "footer": "UP-DCS",
+    "language": "Language"
+  },
+  "home": {
+    "title": "Home",
+    "description": "Minimal Next.js scaffold.",
+    "exgLink": "Open EXG (listing, RTL, detail form)",
+    "buttons": {
+      "title": "Button variants",
+      "primary": "Primary action",
+      "secondary": "Start Video Call",
+      "custom": "Custom action"
+    }
+  },
+  "language": {
+    "english": "English",
+    "arabic": "Arabic",
+    "inSelectorEnglish": "English",
+    "inSelectorArabic": "العربية"
+  },
+  "exg": {
+    "brand": "EXG",
+    "nav": {
+      "home": "Home",
+      "exg": "EXG"
+    },
+    "header": {
+      "subtitle": "ListingLayout + Ant Design Table"
+    },
+    "footer": "EXG demo footer",
+    "list": {
+      "title": "Directory",
+      "titleBar": "EXG / Directory",
+      "reset": "Reset",
+      "filter": "Filters",
+      "add": "Add",
+      "searchPlaceholder": "Search by name or email"
+    },
+    "table": {
+      "name": "Name",
+      "email": "Email",
+      "role": "Role",
+      "actionView": "View"
+    },
+    "detail": {
+      "title": "Record",
+      "titleBar": "EXG / Record",
+      "back": "Back to list",
+      "footer": "Detail actions",
+      "missing": "No row matches this id."
+    },
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "role": "Role"
+    }
+  },
+  "auth": {
+    "signIn": {
+      "title": "Sign in"
+    }
+  },
+  "meetings": {
+    "list": {
+      "title": "Meetings"
+    }
+  },
+  "discountCode": {
+    "placeholder": "Enter Discount Code",
+    "actions": {
+      "apply": "Apply",
+      "applied": "Applied",
+      "remove": "Remove"
+    },
+    "errors": {
+      "invalid": "The discount code you entered is invalid. Please try again."
+    }
+  },
+  "doctorBooking": {
+    "calendar": {
+      "previousMonth": "Previous month",
+      "nextMonth": "Next month"
+    },
+    "slots": {
+      "title": "Available Slots",
+      "morning": "Morning",
+      "afternoon": "Afternoon",
+      "evening": "Evening",
+      "noSlots": "No slots available for this date.",
+      "selectDate": "Select a date to view available slots."
+    },
+    "footer": {
+      "selectedTime": "SELECTED TIME",
+      "bookAppointment": "Book Appointment",
+      "empty": "—"
+    },
+    "errors": {
+      "slotInPast": "The selected time has already passed. Please choose a new slot."
+    }
+  }
+}
