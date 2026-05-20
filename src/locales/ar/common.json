@@ -69,6 +69,54 @@
       "role": "الدور"
     }
   },
+  "patientProfile": {
+    "title": "إنشاء ملف المريض",
+    "fields": {
+      "firstName": "الاسم الأول",
+      "lastName": "اسم العائلة",
+      "nationalId": "رقم الهوية / الإقامة",
+      "contactNo": "رقم التواصل",
+      "nationality": "الجنسية",
+      "dateOfBirth": "تاريخ الميلاد",
+      "gender": "الجنس",
+      "yearOfBirth": "سنة الميلاد"
+    },
+    "placeholders": {
+      "firstName": "الاسم الأول",
+      "lastName": "اسم العائلة",
+      "nationalId": "رقم مكون من 10 أرقام",
+      "contactNo": "رقم التواصل",
+      "nationality": "اختر الجنسية",
+      "dateOfBirth": "DD/MM/YYYY",
+      "yearOfBirth": "YYYY"
+    },
+    "genderOptions": {
+      "male": "ذكر",
+      "female": "أنثى"
+    },
+    "nationalityOptions": {
+      "saudi": "سعودي",
+      "uae": "إماراتي",
+      "kuwaiti": "كويتي",
+      "bahraini": "بحريني"
+    },
+    "info": {
+      "nationalId": "أدخل رقم الهوية الوطنية أو الإقامة المكون من 10 أرقام."
+    },
+    "actions": {
+      "confirmContinue": "تأكيد ومتابعة"
+    },
+    "errors": {
+      "firstNameRequired": "الاسم الأول مطلوب.",
+      "lastNameRequired": "اسم العائلة مطلوب.",
+      "nationalIdRequired": "رقم الهوية / الإقامة مطلوب.",
+      "nationalIdInvalid": "يرجى إدخال رقم صالح مكون من 10 أرقام.",
+      "contactNoRequired": "رقم التواصل مطلوب.",
+      "nationalityRequired": "الجنسية مطلوبة.",
+      "dateOfBirthRequired": "تاريخ الميلاد مطلوب.",
+      "genderRequired": "الجنس مطلوب."
+    }
+  },
   "auth": {
     "signIn": {
       "title": "تسجيل الدخول"

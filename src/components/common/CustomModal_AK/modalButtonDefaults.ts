@@ -2,15 +2,12 @@ import { SITE_COLORS as c } from "@/utility/strings";
 
 const buttonProps = {
   width: "100%",
-  height: "44px",
-  radius: "4px",
-  fontWeight: "700",
+  height: "40px",
 };
 
 const button1Props = {
   color: c.WHITE,
-  backgroundColor: "#312782",
-  customHover: "#271f68",
+  backgroundColor: c.ORANGE,
   isHideBoxShadow: true,
 };
 

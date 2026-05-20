@@ -69,6 +69,54 @@
       "role": "Role"
     }
   },
+  "patientProfile": {
+    "title": "Create Patient Profile",
+    "fields": {
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "nationalId": "National ID / IQAMA",
+      "contactNo": "Contact No",
+      "nationality": "Nationality",
+      "dateOfBirth": "Date of Birth",
+      "gender": "Gender",
+      "yearOfBirth": "Year of Birth"
+    },
+    "placeholders": {
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "nationalId": "10-digit numeric ID",
+      "contactNo": "Contact No",
+      "nationality": "Select Nationality",
+      "dateOfBirth": "DD/MM/YYYY",
+      "yearOfBirth": "YYYY"
+    },
+    "genderOptions": {
+      "male": "Male",
+      "female": "Female"
+    },
+    "nationalityOptions": {
+      "saudi": "Saudi Arabian",
+      "uae": "Emirati",
+      "kuwaiti": "Kuwaiti",
+      "bahraini": "Bahraini"
+    },
+    "info": {
+      "nationalId": "Enter your 10-digit National ID or IQAMA number."
+    },
+    "actions": {
+      "confirmContinue": "Confirm & Continue"
+    },
+    "errors": {
+      "firstNameRequired": "First Name is required.",
+      "lastNameRequired": "Last Name is required.",
+      "nationalIdRequired": "National ID / IQAMA is required.",
+      "nationalIdInvalid": "Please enter a valid 10-digit numeric ID.",
+      "contactNoRequired": "Contact No is required.",
+      "nationalityRequired": "Nationality is required.",
+      "dateOfBirthRequired": "Date of Birth is required.",
+      "genderRequired": "Gender is required."
+    }
+  },
   "auth": {
     "signIn": {
       "title": "Sign in"

@@ -21,7 +21,8 @@ export const SITE_COLORS = {
   TITLE_BAR_BG: "#1e3a5f",
   PAGE_MUTED: "#f1f5f9",
   NAV_PILL: "#ffffff",
-  NAV_SHADOW: "0 1px 2px rgba(15, 23, 42, 0.06), 0 8px 24px rgba(15, 23, 42, 0.06)",
+  NAV_SHADOW:
+    "0 1px 2px rgba(15, 23, 42, 0.06), 0 8px 24px rgba(15, 23, 42, 0.06)",
   ACCENT_GOLD: "#0f766e",
   GREY_2: "#f8fafc",
   GREY_4: "#64748b",
@@ -47,6 +48,11 @@ export const SITE_COLORS = {
   BORDER_GREY: "#D7D7D7",
   SOFT_BLUE_BG: "#E8F5FF",
   PLACEHOLDER_MUTED: "#B5B5B5",
+  BORDER_SUBTLE: "#d9d9d9",
+  FIELD_LABEL: "#464646",
+  DATE_PICKER_ICON: "#636363",
+  PATIENT_PROFILE_PRIMARY: "#203874",
+  BUTTON_SELECTOR_ACTIVE_BACKGROUND: "#D5EBFF",
 } as const;
 
 export const STYLED_COMPONENTS_THEME = {
@@ -185,6 +191,54 @@ export const TRANSLATION_KEYS = {
     FORM_NAME: "exg.form.name",
     FORM_EMAIL: "exg.form.email",
     FORM_ROLE: "exg.form.role",
+  },
+  PATIENT_PROFILE: {
+    TITLE: "patientProfile.title",
+    FIELDS: {
+      FIRST_NAME: "patientProfile.fields.firstName",
+      LAST_NAME: "patientProfile.fields.lastName",
+      NATIONAL_ID: "patientProfile.fields.nationalId",
+      CONTACT_NO: "patientProfile.fields.contactNo",
+      NATIONALITY: "patientProfile.fields.nationality",
+      DATE_OF_BIRTH: "patientProfile.fields.dateOfBirth",
+      GENDER: "patientProfile.fields.gender",
+      YEAR_OF_BIRTH: "patientProfile.fields.yearOfBirth",
+    },
+    PLACEHOLDERS: {
+      FIRST_NAME: "patientProfile.placeholders.firstName",
+      LAST_NAME: "patientProfile.placeholders.lastName",
+      NATIONAL_ID: "patientProfile.placeholders.nationalId",
+      CONTACT_NO: "patientProfile.placeholders.contactNo",
+      NATIONALITY: "patientProfile.placeholders.nationality",
+      DATE_OF_BIRTH: "patientProfile.placeholders.dateOfBirth",
+      YEAR_OF_BIRTH: "patientProfile.placeholders.yearOfBirth",
+    },
+    GENDER_OPTIONS: {
+      MALE: "patientProfile.genderOptions.male",
+      FEMALE: "patientProfile.genderOptions.female",
+    },
+    NATIONALITY_OPTIONS: {
+      SAUDI: "patientProfile.nationalityOptions.saudi",
+      UAE: "patientProfile.nationalityOptions.uae",
+      KUWAITI: "patientProfile.nationalityOptions.kuwaiti",
+      BAHRAINI: "patientProfile.nationalityOptions.bahraini",
+    },
+    INFO: {
+      NATIONAL_ID: "patientProfile.info.nationalId",
+    },
+    ACTIONS: {
+      CONFIRM_CONTINUE: "patientProfile.actions.confirmContinue",
+    },
+    ERRORS: {
+      FIRST_NAME_REQUIRED: "patientProfile.errors.firstNameRequired",
+      LAST_NAME_REQUIRED: "patientProfile.errors.lastNameRequired",
+      NATIONAL_ID_REQUIRED: "patientProfile.errors.nationalIdRequired",
+      NATIONAL_ID_INVALID: "patientProfile.errors.nationalIdInvalid",
+      CONTACT_NO_REQUIRED: "patientProfile.errors.contactNoRequired",
+      NATIONALITY_REQUIRED: "patientProfile.errors.nationalityRequired",
+      DATE_OF_BIRTH_REQUIRED: "patientProfile.errors.dateOfBirthRequired",
+      GENDER_REQUIRED: "patientProfile.errors.genderRequired",
+    },
   },
 } as const;
 

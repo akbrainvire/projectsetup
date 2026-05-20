@@ -35,7 +35,9 @@ export type ButtonHoverEnabledConfig = {
   color: string;
 };
 
-export type ButtonHoverConfig = ButtonHoverDisabledConfig | ButtonHoverEnabledConfig;
+export type ButtonHoverConfig =
+  | ButtonHoverDisabledConfig
+  | ButtonHoverEnabledConfig;
 
 export type ButtonIconDisabledConfig = {
   enabled?: false;
@@ -51,7 +53,9 @@ export type ButtonIconEnabledConfig = {
   size?: number;
 };
 
-export type ButtonIconConfig = ButtonIconDisabledConfig | ButtonIconEnabledConfig;
+export type ButtonIconConfig =
+  | ButtonIconDisabledConfig
+  | ButtonIconEnabledConfig;
 
 export type ButtonEventsConfig = {
   onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
@@ -156,7 +160,9 @@ export type ResolvedButtonHoverActive = {
   color: string;
 };
 
-export type ResolvedButtonHover = ResolvedButtonHoverInactive | ResolvedButtonHoverActive;
+export type ResolvedButtonHover =
+  | ResolvedButtonHoverInactive
+  | ResolvedButtonHoverActive;
 
 export type ResolvedButtonIconInactive = {
   active: false;
@@ -169,7 +175,9 @@ export type ResolvedButtonIconActive = {
   size: number;
 };
 
-export type ResolvedButtonIcon = ResolvedButtonIconInactive | ResolvedButtonIconActive;
+export type ResolvedButtonIcon =
+  | ResolvedButtonIconInactive
+  | ResolvedButtonIconActive;
 
 export type StyledButtonStyleConfig = {
   backgroundColor: string;

@@ -8,15 +8,9 @@ import {
 import { Tooltip } from "antd";
 import { useRef } from "react";
 import type React from "react";
-import { useTranslation } from "react-i18next";
 import CustomButton from "@/components/common/CustomButton";
 import { CustomInputStyles as InputStyles } from "@/components/common/CustomInput_AK/styles";
-import {
-  LANGUAGE_KEYS,
-  SITE_COLORS as c,
-  type LanguageCode,
-} from "@/utility/strings";
-import { Icons } from "@/assets/svg";
+import { SITE_COLORS as c } from "@/utility/strings";
 
 export type CustomInputProps = {
   name?: string;
@@ -84,9 +78,6 @@ export type CustomInputProps = {
   verifyButtonText?: React.ReactNode;
   verifiedLabel?: React.ReactNode;
   autoComplete?: string;
-  showInfoIcon?: boolean;
-  infoDescription?: string;
-  languageCode?: LanguageCode | string;
 };
 
 export default function CustomInput({
@@ -127,7 +118,7 @@ export default function CustomInput({
   messageBoxHeight = "",
   disabledPhoneCode = false,
   height = "",
-  allowOnlyNumber,
+  allowOnlyNumber = true,
   labelClassName,
   top,
   disableAutoFocus = false,
@@ -155,14 +146,8 @@ export default function CustomInput({
   verifyButtonText = "Verify",
   verifiedLabel = "Verified",
   autoComplete,
-  showInfoIcon = false,
-  infoDescription = "",
-  languageCode,
 }: CustomInputProps) {
-  const { i18n } = useTranslation();
   const inputRef = useRef<HTMLInputElement>(null);
-  const activeLanguageCode = languageCode ?? i18n.language;
-  const isArabic = activeLanguageCode?.startsWith(LANGUAGE_KEYS.ARABIC);
 
   const verifyButtonProps = {
     color: c.ORANGE,
@@ -192,13 +177,10 @@ export default function CustomInput({
         value={value}
         placeholder={placeholder}
         onChange={(e) => {
-          if (allowOnlyNumber) {
-            e.target.value = e.target.value.replace(/\D/g, "");
-          }
           onChangeHandler(e);
         }}
         onKeyDown={(e) => {
-          if (allowOnlyNumber) {
+          if (type === "number" && allowOnlyNumber) {
             const allowedKeys = [
               "Backspace",
               "Tab",
@@ -238,9 +220,6 @@ export default function CustomInput({
         maxLength={maxLength ?? undefined}
         $showRightIconFixed={showRightIconFixed}
         autoComplete={autoComplete}
-        inputMode={allowOnlyNumber ? "numeric" : inputProps.inputMode}
-        pattern={allowOnlyNumber ? "[0-9]*" : inputProps.pattern}
-        $isArabic={isArabic}
       />
     );
 
@@ -261,10 +240,7 @@ export default function CustomInput({
   };
 
   return (
-    <InputStyles.StyledInputWrapper
-      className={customWrapperClass}
-      $isArabic={isArabic}
-    >
+    <InputStyles.StyledInputWrapper className={customWrapperClass}>
       {showLabel ? (
         <InputStyles.InputGroup className="label_group">
           <InputStyles.InfoLabelWrapper
@@ -273,7 +249,6 @@ export default function CustomInput({
             <InputStyles.StyledInputLabel
               className={`${labelClass} ${labelClassName ?? ""}`}
               onClick={labelCallback}
-              $isArabic={isArabic}
             >
               {labelIcon}
               {showLabelTooltip ? (
@@ -288,11 +263,6 @@ export default function CustomInput({
                   ) : null}
                 </div>
               )}
-              {showInfoIcon ? (
-                <Tooltip title={infoDescription}>
-                  <Icons.InfoIcon />
-                </Tooltip>
-              ) : null}
             </InputStyles.StyledInputLabel>
           </InputStyles.InfoLabelWrapper>
           {verifyTag ? (
@@ -342,7 +312,6 @@ export default function CustomInput({
           $showSearchIcon={showSearchIcon || showPassWordIcon}
           $showRightIconFixed={showRightIconFixed}
           $height={height}
-          $isArabic={isArabic}
         >
           <InputStyles.PrefixWrapper>
             {prefix ? (
@@ -403,7 +372,6 @@ export default function CustomInput({
           $isMessageRelative={isMessageRelative}
           $messageBoxHeight={messageBoxHeight}
           $top={top}
-          $isArabic={isArabic}
         >
           {errorMessage ? errorMessage : null}
         </InputStyles.errorMessage>

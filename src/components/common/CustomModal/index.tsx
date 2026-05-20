@@ -3,14 +3,18 @@
 import { CloseOutlined } from "@ant-design/icons";
 import type React from "react";
 import CustomButton from "@/components/common/CustomButton";
-import { customModalButtonDefaults as ModalButtonDefaults } from "@/components/common/CustomModal/modalButtonDefaults";
-import { CustomModalStyles } from "@/components/common/CustomModal/styles";
+import { customModalButtonDefaults as ModalButtonDefaults } from "@/components/common/CustomModal_AK/modalButtonDefaults";
+import { CustomModalStyles } from "@/components/common/CustomModal_AK/styles";
 
 export type CustomModalProps = {
   isOpen: boolean;
   onClose: () => void;
   title: React.ReactNode;
-  children: React.ReactNode;
+  description?: React.ReactNode;
+  icon?: React.ReactNode;
+  buttonText?: React.ReactNode;
+  onButtonClick?: () => void;
+  showButton?: boolean;
   buttonDivWidth?: string;
   submitIcon?: React.ReactNode;
   cancelIcon?: React.ReactNode;
@@ -30,66 +34,61 @@ export default function CustomModal({
   isOpen,
   onClose,
   title,
-  children,
+  description,
+  icon,
+  buttonText,
+  onButtonClick,
+  showButton,
   buttonDivWidth,
   submitIcon,
-  cancelIcon,
   submitText,
-  cancelText,
   onSubmit,
-  onCancel,
-  isCancelButton = true,
-  isSubmitButton = true,
+  isSubmitButton,
   width = "",
   height = "",
   alignModal,
-  showCloseIcon = true,
+  showCloseIcon = false,
 }: CustomModalProps) {
   if (!isOpen) {
     return null;
   }
 
+  const actionText = buttonText ?? submitText;
+  const shouldShowButton = showButton ?? isSubmitButton ?? Boolean(actionText);
+  const handleButtonClick = onButtonClick ?? onSubmit;
+
   return (
     <CustomModalStyles.Overlay $alignModal={alignModal || "center"}>
-      <CustomModalStyles.ModalContainer $width={width || undefined} $height={height || undefined}>
-        <CustomModalStyles.ModalHeadingContainer>
-          {showCloseIcon ? (
-            <CustomModalStyles.CloseIconDiv onClick={onClose}>
-              <CloseOutlined />
-            </CustomModalStyles.CloseIconDiv>
-          ) : null}
-          <CustomModalStyles.ModalHeading>{title}</CustomModalStyles.ModalHeading>
-        </CustomModalStyles.ModalHeadingContainer>
-        <CustomModalStyles.HorizontalLine />
-        <CustomModalStyles.Content>{children}</CustomModalStyles.Content>
-        <CustomModalStyles.Footer>
+      <CustomModalStyles.ModalContainer
+        $width={width || undefined}
+        $height={height || undefined}
+      >
+        {showCloseIcon ? (
+          <CustomModalStyles.CloseIconDiv onClick={onClose}>
+            <CloseOutlined />
+          </CustomModalStyles.CloseIconDiv>
+        ) : null}
+        {icon ? (
+          <CustomModalStyles.IconWrapper>{icon}</CustomModalStyles.IconWrapper>
+        ) : null}
+        <CustomModalStyles.ModalHeading>{title}</CustomModalStyles.ModalHeading>
+        {description ? (
+          <CustomModalStyles.Description>
+            {description}
+          </CustomModalStyles.Description>
+        ) : null}
+        {shouldShowButton && actionText ? (
           <CustomModalStyles.ButtonMainDiv $buttonDivWidth={buttonDivWidth}>
-            <CustomModalStyles.ButtonContainer>
-              {isSubmitButton ? (
-                <CustomButton
-                  {...ModalButtonDefaults.buttonProps}
-                  {...ModalButtonDefaults.button1Props}
-                  type="button"
-                  icon={submitIcon}
-                  text={submitText}
-                  onClick={onSubmit}
-                />
-              ) : null}
-            </CustomModalStyles.ButtonContainer>
-            <CustomModalStyles.ButtonContainer>
-              {isCancelButton ? (
-                <CustomButton
-                  {...ModalButtonDefaults.buttonProps}
-                  {...ModalButtonDefaults.button2Props}
-                  type="button"
-                  icon={cancelIcon}
-                  text={cancelText}
-                  onClick={onCancel}
-                />
-              ) : null}
-            </CustomModalStyles.ButtonContainer>
+            <CustomButton
+              {...ModalButtonDefaults.buttonProps}
+              {...ModalButtonDefaults.button1Props}
+              type="button"
+              icon={submitIcon}
+              text={actionText}
+              onClick={handleButtonClick}
+            />
           </CustomModalStyles.ButtonMainDiv>
-        </CustomModalStyles.Footer>
+        ) : null}
       </CustomModalStyles.ModalContainer>
     </CustomModalStyles.Overlay>
   );
