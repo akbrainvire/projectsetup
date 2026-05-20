@@ -10,7 +10,6 @@
   "layout": {
     "product": "UP-DCS",
     "navHome": "Home",
-    "navExg": "EXG",
     "contact": "Contact",
     "footer": "UP-DCS",
     "language": "Language"
@@ -18,7 +17,6 @@
   "home": {
     "title": "Home",
     "description": "Minimal Next.js scaffold.",
-    "exgLink": "Open EXG (listing, RTL, detail form)",
     "buttons": {
       "title": "Button variants",
       "primary": "Primary action",
@@ -31,43 +29,6 @@
     "arabic": "Arabic",
     "inSelectorEnglish": "English",
     "inSelectorArabic": "العربية"
-  },
-  "exg": {
-    "brand": "EXG",
-    "nav": {
-      "home": "Home",
-      "exg": "EXG"
-    },
-    "header": {
-      "subtitle": "ListingLayout + Ant Design Table"
-    },
-    "footer": "EXG demo footer",
-    "list": {
-      "title": "Directory",
-      "titleBar": "EXG / Directory",
-      "reset": "Reset",
-      "filter": "Filters",
-      "add": "Add",
-      "searchPlaceholder": "Search by name or email"
-    },
-    "table": {
-      "name": "Name",
-      "email": "Email",
-      "role": "Role",
-      "actionView": "View"
-    },
-    "detail": {
-      "title": "Record",
-      "titleBar": "EXG / Record",
-      "back": "Back to list",
-      "footer": "Detail actions",
-      "missing": "No row matches this id."
-    },
-    "form": {
-      "name": "Name",
-      "email": "Email",
-      "role": "Role"
-    }
   },
   "patientProfile": {
     "title": "Create Patient Profile",

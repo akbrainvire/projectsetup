@@ -10,7 +10,6 @@ export type LanguageCode = (typeof LANGUAGE_KEYS)[keyof typeof LANGUAGE_KEYS];
 
 export const ROUTES = {
   HOME: "/",
-  EXG: "/exg",
   AUTH: {
     SIGN_IN: "/auth/sign-in",
   },
@@ -104,7 +103,6 @@ export const TRANSLATION_KEYS = {
   LAYOUT: {
     PRODUCT: "layout.product",
     NAV_HOME: "layout.navHome",
-    NAV_EXG: "layout.navExg",
     CONTACT: "layout.contact",
     FOOTER: "layout.footer",
     LANGUAGE: "layout.language",
@@ -122,7 +120,6 @@ export const TRANSLATION_KEYS = {
   HOME: {
     TITLE: "home.title",
     DESCRIPTION: "home.description",
-    EXG_LINK: "home.exgLink",
     BUTTONS: {
       TITLE: "home.buttons.title",
       PRIMARY: "home.buttons.primary",
@@ -166,31 +163,6 @@ export const TRANSLATION_KEYS = {
     ERRORS: {
       SLOT_IN_PAST: "doctorBooking.errors.slotInPast",
     },
-  },
-  EXG: {
-    BRAND: "exg.brand",
-    NAV_HOME: "exg.nav.home",
-    NAV_EXG: "exg.nav.exg",
-    HEADER_SUBTITLE: "exg.header.subtitle",
-    FOOTER: "exg.footer",
-    LIST_TITLE: "exg.list.title",
-    TITLE_BAR: "exg.list.titleBar",
-    LIST_RESET: "exg.list.reset",
-    LIST_FILTER: "exg.list.filter",
-    LIST_ADD: "exg.list.add",
-    SEARCH_PLACEHOLDER: "exg.list.searchPlaceholder",
-    COL_NAME: "exg.table.name",
-    COL_EMAIL: "exg.table.email",
-    COL_ROLE: "exg.table.role",
-    ACTION_VIEW: "exg.table.actionView",
-    DETAIL_TITLE: "exg.detail.title",
-    DETAIL_TITLE_BAR: "exg.detail.titleBar",
-    DETAIL_BACK: "exg.detail.back",
-    DETAIL_FOOTER: "exg.detail.footer",
-    DETAIL_MISSING: "exg.detail.missing",
-    FORM_NAME: "exg.form.name",
-    FORM_EMAIL: "exg.form.email",
-    FORM_ROLE: "exg.form.role",
   },
   PATIENT_PROFILE: {
     TITLE: "patientProfile.title",
@@ -244,7 +216,6 @@ export const TRANSLATION_KEYS = {
 
 export const LAYOUT_NAV_LINKS = [
   { href: ROUTES.HOME, labelKey: TRANSLATION_KEYS.LAYOUT.NAV_HOME },
-  { href: ROUTES.EXG, labelKey: TRANSLATION_KEYS.LAYOUT.NAV_EXG },
 ] as const;
 
 export const LAYOUT_CONTACT_HREF = ROUTES.HOME;

@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { Typography } from "antd";
 import { useCallback, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
@@ -51,7 +50,7 @@ import type {
   OptionSelectSingleValue,
 } from "@/types/optionSelectGroup.types";
 import type { RootState } from "@/redux/store";
-import { ROUTES, SITE_COLORS, TRANSLATION_KEYS } from "@/utility/strings";
+import { SITE_COLORS, TRANSLATION_KEYS } from "@/utility/strings";
 import { HomePageStyles } from "@/app/styles";
 
 const VERIFYING_FOR_FORM_KEY = "verifyingFor";
@@ -321,7 +320,6 @@ export default function HomePage() {
             {t(TRANSLATION_KEYS.APP.REDUX_STATE, { status: String(commonReady) })}
           </Typography.Text>
           <Typography.Paragraph>{t(TRANSLATION_KEYS.HOME.DESCRIPTION)}</Typography.Paragraph>
-          <Link href={ROUTES.EXG}>{t(TRANSLATION_KEYS.HOME.EXG_LINK)}</Link>
 
           <HomePageStyles.ButtonSection>
             <Typography.Title level={4}>

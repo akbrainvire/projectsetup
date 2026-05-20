@@ -10,7 +10,6 @@
   "layout": {
     "product": "UP-DCS",
     "navHome": "الرئيسية",
-    "navExg": "EXG",
     "contact": "اتصل بنا",
     "footer": "UP-DCS",
     "language": "اللغة"
@@ -18,7 +17,6 @@
   "home": {
     "title": "الرئيسية",
     "description": "هيكل Next.js بسيط.",
-    "exgLink": "فتح EXG (قائمة، RTL، نموذج التفاصيل)",
     "buttons": {
       "title": "أنماط الأزرار",
       "primary": "إجراء أساسي",
@@ -31,43 +29,6 @@
     "arabic": "العربية",
     "inSelectorEnglish": "English",
     "inSelectorArabic": "العربية"
-  },
-  "exg": {
-    "brand": "EXG",
-    "nav": {
-      "home": "الرئيسية",
-      "exg": "EXG"
-    },
-    "header": {
-      "subtitle": "ListingLayout + جدول Ant Design"
-    },
-    "footer": "تذييل تجربة EXG",
-    "list": {
-      "title": "الدليل",
-      "titleBar": "EXG / الدليل",
-      "reset": "إعادة ضبط",
-      "filter": "عوامل التصفية",
-      "add": "إضافة",
-      "searchPlaceholder": "بحث بالاسم أو البريد"
-    },
-    "table": {
-      "name": "الاسم",
-      "email": "البريد",
-      "role": "الدور",
-      "actionView": "عرض"
-    },
-    "detail": {
-      "title": "سجل",
-      "titleBar": "EXG / سجل",
-      "back": "العودة إلى القائمة",
-      "footer": "إجراءات التفاصيل",
-      "missing": "لا يوجد صف يطابق هذا المعرّف."
-    },
-    "form": {
-      "name": "الاسم",
-      "email": "البريد",
-      "role": "الدور"
-    }
   },
   "patientProfile": {
     "title": "إنشاء ملف المريض",
