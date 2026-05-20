@@ -101,11 +101,14 @@ const ButtonText = styled.span<{ $textStyle: StyledButtonTextConfig }>`
   margin: 0;
   font-size: ${({ $textStyle }) => $textStyle.fontSize};
   line-height: 1.25;
+  text-align: center;
 `;
 
 const ContentWrapper = styled.div<{ $hasInnerMarginTop: boolean }>`
   display: flex;
   align-items: center;
+  justify-content: center;
+  text-align: center;
   width: 100%;
 
   .inner {

@@ -71,6 +71,14 @@ const BookingShowcaseShell = styled.div`
   box-sizing: border-box;
 `;
 
+const CountdownTimerRow = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+`;
+
 const BookingShowcasePanel = styled.div`
   width: 30%;
   min-width: 280px;
@@ -90,6 +98,7 @@ export const HomePageStyles = {
   SelectableCardRow,
   IconInfoCardRow,
   DiscountCodeStack,
+  CountdownTimerRow,
   BookingShowcaseShell,
   BookingShowcasePanel,
 };

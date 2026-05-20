@@ -120,5 +120,44 @@
     "errors": {
       "slotInPast": "The selected time has already passed. Please choose a new slot."
     }
+  },
+  "countdownTimer": {
+    "label": "STARTS IN",
+    "showcase": {
+      "title": "Countdown timer",
+      "completed": "Timer reached zero."
+    }
+  },
+  "payment": {
+    "title": "Payment",
+    "subtitle": "Select Payment Method",
+    "methods": {
+      "creditCard": "Credit Card",
+      "applePay": "Apple Pay",
+      "stcPay": "STC Pay",
+      "cashOnDelivery": "Cash On Delivery",
+      "tamara": "Tamara",
+      "tabby": "Tabby"
+    },
+    "altText": {
+      "creditCard": "Credit card networks",
+      "applePay": "Apple Pay",
+      "stcPay": "STC Pay",
+      "cashOnDelivery": "Cash on delivery",
+      "tamara": "Tamara",
+      "tabby": "Tabby"
+    },
+    "fee": {
+      "totalLabel": "Total Consultation Fee",
+      "insuranceLabel": "Covered by Insurance",
+      "deductibleTitle": "Your Deductible",
+      "deductibleSubtitle": "Amount due today"
+    },
+    "actions": {
+      "payNow": "Pay Now"
+    },
+    "errors": {
+      "selectMethodRequired": "Please select a payment method."
+    }
   }
 }

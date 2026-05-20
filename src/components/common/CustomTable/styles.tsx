@@ -1,4 +1,4 @@
-import { NotoSansFont, NotoSerifFont } from "@/styles/fonts";
+import { NotoSansFont } from "@/styles/fonts";
 import { SITE_COLORS as c } from "@/utility/strings";
 import styled from "styled-components";
 
@@ -13,7 +13,7 @@ const TableContainer = styled.div`
 `;
 
 const TableTitle = styled.h3`
-  font-family: ${NotoSerifFont.style.fontFamily};
+  font-family: ${NotoSansFont.style.fontFamily};
   font-size: 1.8rem;
   font-weight: bold;
   color: ${c.BLUE_1};

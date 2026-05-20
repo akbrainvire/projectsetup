@@ -5,6 +5,7 @@ import { useCallback, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 import { Icons } from "@/assets/svg";
+import CountdownTimer from "@/components/common/CountdownTimer";
 import CustomButton from "@/components/common/CustomButton";
 import DiscountCodeInput from "@/components/common/DiscountCodeInput";
 import IconInfoCard from "@/components/common/IconInfoCard";
@@ -19,6 +20,10 @@ import ServiceNavigationCard from "@/components/selection/ServiceNavigationCard"
 import { PageShell } from "@/components/layouts/PageShell";
 import { BUTTON_ICON_POSITIONS, BUTTON_VARIANTS } from "@/constants/button";
 import { DISCOUNT_CODE_INPUT_STATES } from "@/constants/discountCodeInput";
+import {
+  COUNTDOWN_TIMER_CONSTANTS,
+  COUNTDOWN_TIMER_FALLBACKS,
+} from "@/constants/countdownTimer";
 import { OPTION_SELECT_MODES } from "@/constants/optionSelectGroup";
 import {
   HOME_CONSULTATION_FEE_CARD_ACTION_LABEL,
@@ -283,6 +288,10 @@ export default function HomePage() {
     setBookingSelectedSlotId(slotId);
   }, []);
 
+  const handleCountdownComplete = useCallback(() => {
+    console.log("[CountdownTimer] reached zero");
+  }, []);
+
   const handleBookAppointment = useCallback(() => {
     if (!bookingSelectedDate || !bookingSelectedSlotId) {
       return;
@@ -361,6 +370,20 @@ export default function HomePage() {
               />
             </HomePageStyles.ButtonRow>
           </HomePageStyles.ButtonSection>
+
+          <HomePageStyles.CardSection>
+            <Typography.Title level={4}>
+              {t(COUNTDOWN_TIMER_CONSTANTS.SHOWCASE.TITLE, {
+                defaultValue: COUNTDOWN_TIMER_FALLBACKS.SHOWCASE_TITLE,
+              })}
+            </Typography.Title>
+            <HomePageStyles.CountdownTimerRow>
+              <CountdownTimer
+                durationSeconds={COUNTDOWN_TIMER_CONSTANTS.DEMO.DURATION_SECONDS}
+                onComplete={handleCountdownComplete}
+              />
+            </HomePageStyles.CountdownTimerRow>
+          </HomePageStyles.CardSection>
 
           <HomePageStyles.CardSection>
             <Typography.Title level={4}>Doctor appointment cards</Typography.Title>

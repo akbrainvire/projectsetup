@@ -1,4 +1,4 @@
-import { NotoSerifFont } from "@/styles/fonts";
+import { NotoSansFont } from "@/styles/fonts";
 import styled from "styled-components";
 import { SITE_COLORS as c } from "@/utility/strings";
 
@@ -32,7 +32,7 @@ const TitleBarStrip = styled.div`
   color: ${c.WHITE};
   padding: 12px clamp(16px, 3vw, 40px);
   border-radius: 8px;
-  font-family: ${NotoSerifFont.style.fontFamily};
+  font-family: ${NotoSansFont.style.fontFamily};
   font-weight: 600;
   font-size: 15px;
   letter-spacing: 0.02em;

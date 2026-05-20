@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Providers } from "@/app/providers";
 import { AppChrome } from "@/components/layouts/AppChrome";
-import { NotoSansFont, NotoSerifFont } from "@/styles/fonts";
+import { NotoSansFont } from "@/styles/fonts";
 import "@/styles/globals.css";
 
 export const metadata: Metadata = {
@@ -13,7 +13,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang="en"
-      className={`${NotoSansFont.className} ${NotoSerifFont.className}`}
+      className={NotoSansFont.className}
       suppressHydrationWarning
     >
       <body className={NotoSansFont.className}>

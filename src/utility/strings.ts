@@ -52,6 +52,9 @@ export const SITE_COLORS = {
   DATE_PICKER_ICON: "#636363",
   PATIENT_PROFILE_PRIMARY: "#203874",
   BUTTON_SELECTOR_ACTIVE_BACKGROUND: "#D5EBFF",
+  PURPLE_PRIMARY: "#8358FA",
+  PURPLE_TINT_BG: "#E5DDFF",
+  COUNTDOWN_CARD_SHADOW: "0 2px 8px rgba(131, 88, 250, 0.08)",
 } as const;
 
 export const STYLED_COMPONENTS_THEME = {
@@ -162,6 +165,45 @@ export const TRANSLATION_KEYS = {
     },
     ERRORS: {
       SLOT_IN_PAST: "doctorBooking.errors.slotInPast",
+    },
+  },
+  PAYMENT: {
+    TITLE: "payment.title",
+    SUBTITLE: "payment.subtitle",
+    METHODS: {
+      CREDIT_CARD: "payment.methods.creditCard",
+      APPLE_PAY: "payment.methods.applePay",
+      STC_PAY: "payment.methods.stcPay",
+      CASH_ON_DELIVERY: "payment.methods.cashOnDelivery",
+      TAMARA: "payment.methods.tamara",
+      TABBY: "payment.methods.tabby",
+    },
+    ALT_TEXT: {
+      CREDIT_CARD: "payment.altText.creditCard",
+      APPLE_PAY: "payment.altText.applePay",
+      STC_PAY: "payment.altText.stcPay",
+      CASH_ON_DELIVERY: "payment.altText.cashOnDelivery",
+      TAMARA: "payment.altText.tamara",
+      TABBY: "payment.altText.tabby",
+    },
+    FEE: {
+      TOTAL_LABEL: "payment.fee.totalLabel",
+      INSURANCE_LABEL: "payment.fee.insuranceLabel",
+      DEDUCTIBLE_TITLE: "payment.fee.deductibleTitle",
+      DEDUCTIBLE_SUBTITLE: "payment.fee.deductibleSubtitle",
+    },
+    ACTIONS: {
+      PAY_NOW: "payment.actions.payNow",
+    },
+    ERRORS: {
+      SELECT_METHOD_REQUIRED: "payment.errors.selectMethodRequired",
+    },
+  },
+  COUNTDOWN_TIMER: {
+    LABEL: "countdownTimer.label",
+    SHOWCASE: {
+      TITLE: "countdownTimer.showcase.title",
+      COMPLETED: "countdownTimer.showcase.completed",
     },
   },
   PATIENT_PROFILE: {

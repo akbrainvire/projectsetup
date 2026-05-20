@@ -5,7 +5,7 @@ export const DISCOUNT_CODE_INPUT_STATES = {
 } as const;
 
 export const DISCOUNT_CODE_INPUT_DEFAULTS = {
-  MAX_WIDTH: "846px",
+  MAX_WIDTH: "100%",
   HEIGHT: "44px",
   BORDER_RADIUS: "4px",
   PADDING: "0 44px 0 22px",

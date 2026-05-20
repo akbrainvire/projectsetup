@@ -120,5 +120,44 @@
     "errors": {
       "slotInPast": "لقد انقضى الوقت المختار. يرجى اختيار موعد جديد."
     }
+  },
+  "countdownTimer": {
+    "label": "يبدأ خلال",
+    "showcase": {
+      "title": "مؤقت العد التنازلي",
+      "completed": "وصل المؤقت إلى الصفر."
+    }
+  },
+  "payment": {
+    "title": "الدفع",
+    "subtitle": "اختر طريقة الدفع",
+    "methods": {
+      "creditCard": "بطاقة ائتمان",
+      "applePay": "آبل باي",
+      "stcPay": "STC Pay",
+      "cashOnDelivery": "الدفع عند الاستلام",
+      "tamara": "تمارا",
+      "tabby": "تابي"
+    },
+    "altText": {
+      "creditCard": "شبكات البطاقات الائتمانية",
+      "applePay": "آبل باي",
+      "stcPay": "STC Pay",
+      "cashOnDelivery": "الدفع عند الاستلام",
+      "tamara": "تمارا",
+      "tabby": "تابي"
+    },
+    "fee": {
+      "totalLabel": "إجمالي رسوم الاستشارة",
+      "insuranceLabel": "مغطى بالتأمين",
+      "deductibleTitle": "نسبة التحمل",
+      "deductibleSubtitle": "المبلغ المستحق اليوم"
+    },
+    "actions": {
+      "payNow": "ادفع الآن"
+    },
+    "errors": {
+      "selectMethodRequired": "يرجى اختيار طريقة دفع."
+    }
   }
 }
