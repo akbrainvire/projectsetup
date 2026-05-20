@@ -9,6 +9,7 @@ import CountdownTimer from "@/components/common/CountdownTimer";
 import CustomButton from "@/components/common/CustomButton";
 import DiscountCodeInput from "@/components/common/DiscountCodeInput";
 import IconInfoCard from "@/components/common/IconInfoCard";
+import ConsultationDetailsCard from "@/components/common/ConsultationDetailsCard";
 import ConsultationFeeCard from "@/components/doctor/ConsultationFeeCard";
 import DoctorAppointmentBooking from "@/components/doctor/DoctorAppointmentBooking";
 import DoctorAppointmentCard from "@/components/doctor/DoctorAppointmentCard";
@@ -37,6 +38,7 @@ import {
   HOME_SERVICE_NAVIGATION_CARD_DEMOS,
   HOME_VERIFYING_OPTIONS,
 } from "@/constants/homeDemo";
+import { HOME_CONSULTATION_DETAILS_CARD_DEMO } from "@/constants/consultationDetailsDemo";
 import {
   HOME_DOCTOR_BOOKING_AVAILABILITY,
   HOME_DOCTOR_BOOKING_AVAILABLE_DATES,
@@ -64,7 +66,9 @@ const CONSULTATION_TYPE_FORM_KEY = "consultationType";
 
 export default function HomePage() {
   const { t } = useTranslation("common");
-  const commonReady = useSelector((state: RootState) => state.common.initialized);
+  const commonReady = useSelector(
+    (state: RootState) => state.common.initialized
+  );
   const verifyingOptions = [...HOME_VERIFYING_OPTIONS];
 
   const optionSelectForm = useForm({
@@ -94,15 +98,17 @@ export default function HomePage() {
   const verifyingForMultiValue = optionSelectForm.values[
     VERIFYING_FOR_MULTI_FORM_KEY
   ] as OptionSelectMultipleValue;
-  const verifyingForError = String(optionSelectForm.errors[VERIFYING_FOR_FORM_KEY] ?? "");
+  const verifyingForError = String(
+    optionSelectForm.errors[VERIFYING_FOR_FORM_KEY] ?? ""
+  );
   const verifyingForMultiError = String(
-    optionSelectForm.errors[VERIFYING_FOR_MULTI_FORM_KEY] ?? "",
+    optionSelectForm.errors[VERIFYING_FOR_MULTI_FORM_KEY] ?? ""
   );
   const consultationTypeValue = optionSelectForm.values[
     CONSULTATION_TYPE_FORM_KEY
   ] as OptionSelectSingleValue;
   const consultationTypeError = String(
-    optionSelectForm.errors[CONSULTATION_TYPE_FORM_KEY] ?? "",
+    optionSelectForm.errors[CONSULTATION_TYPE_FORM_KEY] ?? ""
   );
 
   const handlePrimaryButtonClick = () => {
@@ -143,12 +149,15 @@ export default function HomePage() {
       formKey: VERIFYING_FOR_MULTI_FORM_KEY,
       value: selectedValues,
     });
-    optionSelectForm.handleOnMultipleSelection(VERIFYING_FOR_MULTI_FORM_KEY, selectedValues);
+    optionSelectForm.handleOnMultipleSelection(
+      VERIFYING_FOR_MULTI_FORM_KEY,
+      selectedValues
+    );
   };
 
   const handleVerifyingOptionClick = (
     option: OptionSelectItem,
-    formValue: OptionSelectGroupValue,
+    formValue: OptionSelectGroupValue
   ) => {
     console.log("[OptionSelectGroup] single onOptionClick", {
       formKey: VERIFYING_FOR_FORM_KEY,
@@ -159,7 +168,7 @@ export default function HomePage() {
 
   const handleVerifyingMultiOptionClick = (
     option: OptionSelectItem,
-    formValue: OptionSelectGroupValue,
+    formValue: OptionSelectGroupValue
   ) => {
     console.log("[OptionSelectGroup] multiple onOptionClick", {
       formKey: VERIFYING_FOR_MULTI_FORM_KEY,
@@ -171,7 +180,7 @@ export default function HomePage() {
   const handleConsultationTypeSelect = (
     label: string,
     value: string,
-    cardKey: string,
+    cardKey: string
   ) => {
     const formValue = { label, value };
     console.log("[SelectableServiceCard] onClick", {
@@ -186,7 +195,7 @@ export default function HomePage() {
     handleConsultationTypeSelect(
       HOME_SELECTABLE_SERVICE_CARD_DEMOS.INSTANT.title,
       "instant",
-      "INSTANT",
+      "INSTANT"
     );
   };
 
@@ -194,7 +203,7 @@ export default function HomePage() {
     handleConsultationTypeSelect(
       HOME_SELECTABLE_SERVICE_CARD_DEMOS.SCHEDULED.title,
       "scheduled",
-      "SCHEDULED",
+      "SCHEDULED"
     );
   };
 
@@ -230,31 +239,39 @@ export default function HomePage() {
   };
 
   const initialBookingDate = useMemo(
-    () => findFirstSelectableAppointmentDate(HOME_DOCTOR_BOOKING_AVAILABLE_DATES),
-    [],
+    () =>
+      findFirstSelectableAppointmentDate(HOME_DOCTOR_BOOKING_AVAILABLE_DATES),
+    []
   );
 
   const [bookingSelectedDate, setBookingSelectedDate] = useState<string | null>(
-    initialBookingDate,
+    initialBookingDate
   );
-  const [bookingSelectedSlotId, setBookingSelectedSlotId] = useState<string | null>(null);
-  const [bookingSlots, setBookingSlots] = useState<AppointmentTimeSlot[]>(() => {
-    if (!initialBookingDate) {
-      return [];
+  const [bookingSelectedSlotId, setBookingSelectedSlotId] = useState<
+    string | null
+  >(null);
+  const [bookingSlots, setBookingSlots] = useState<AppointmentTimeSlot[]>(
+    () => {
+      if (!initialBookingDate) {
+        return [];
+      }
+      return HOME_DOCTOR_BOOKING_AVAILABILITY[initialBookingDate] ?? [];
     }
-    return HOME_DOCTOR_BOOKING_AVAILABILITY[initialBookingDate] ?? [];
-  });
+  );
   const [isBookingSubmitting, setIsBookingSubmitting] = useState(false);
 
   const [discountCodeValue, setDiscountCodeValue] = useState<string>(
-    HOME_DISCOUNT_CODE_DEMOS.INITIAL_VALUE,
+    HOME_DISCOUNT_CODE_DEMOS.INITIAL_VALUE
   );
-  const [submittedDiscountCode, setSubmittedDiscountCode] = useState<string | null>(
-    null,
-  );
+  const [submittedDiscountCode, setSubmittedDiscountCode] = useState<
+    string | null
+  >(null);
 
   const discountCodeState = useMemo(() => {
-    if (submittedDiscountCode === null || submittedDiscountCode !== discountCodeValue) {
+    if (
+      submittedDiscountCode === null ||
+      submittedDiscountCode !== discountCodeValue
+    ) {
       return DISCOUNT_CODE_INPUT_STATES.IDLE;
     }
     if (submittedDiscountCode === HOME_DISCOUNT_CODE_DEMOS.VALID_CODE) {
@@ -268,7 +285,9 @@ export default function HomePage() {
   };
 
   const handleDiscountCodeApply = () => {
-    console.log("[DiscountCodeInput] apply clicked", { value: discountCodeValue });
+    console.log("[DiscountCodeInput] apply clicked", {
+      value: discountCodeValue,
+    });
     setSubmittedDiscountCode(discountCodeValue);
   };
 
@@ -298,10 +317,13 @@ export default function HomePage() {
     }
 
     const selectedSlot = bookingSlots.find(
-      (slot: AppointmentTimeSlot) => slot.id === bookingSelectedSlotId,
+      (slot: AppointmentTimeSlot) => slot.id === bookingSelectedSlotId
     );
 
-    if (!selectedSlot || isAppointmentSlotInPast(selectedSlot.value, bookingSelectedDate)) {
+    if (
+      !selectedSlot ||
+      isAppointmentSlotInPast(selectedSlot.value, bookingSelectedDate)
+    ) {
       notifyError(t(TRANSLATION_KEYS.DOCTOR_BOOKING.ERRORS.SLOT_IN_PAST));
       setBookingSelectedSlotId(null);
       setBookingSlots((current: AppointmentTimeSlot[]) => [...current]);
@@ -323,12 +345,20 @@ export default function HomePage() {
     <PageShell>
       <HomePageStyles.Main>
         <HomePageStyles.Stack>
-          <Typography.Title level={2}>{t(TRANSLATION_KEYS.APP.TITLE)}</Typography.Title>
-          <Typography.Paragraph>{t(TRANSLATION_KEYS.APP.WELCOME)}</Typography.Paragraph>
+          <Typography.Title level={2}>
+            {t(TRANSLATION_KEYS.APP.TITLE)}
+          </Typography.Title>
+          <Typography.Paragraph>
+            {t(TRANSLATION_KEYS.APP.WELCOME)}
+          </Typography.Paragraph>
           <Typography.Text type="secondary">
-            {t(TRANSLATION_KEYS.APP.REDUX_STATE, { status: String(commonReady) })}
+            {t(TRANSLATION_KEYS.APP.REDUX_STATE, {
+              status: String(commonReady),
+            })}
           </Typography.Text>
-          <Typography.Paragraph>{t(TRANSLATION_KEYS.HOME.DESCRIPTION)}</Typography.Paragraph>
+          <Typography.Paragraph>
+            {t(TRANSLATION_KEYS.HOME.DESCRIPTION)}
+          </Typography.Paragraph>
 
           <HomePageStyles.ButtonSection>
             <Typography.Title level={4}>
@@ -379,14 +409,25 @@ export default function HomePage() {
             </Typography.Title>
             <HomePageStyles.CountdownTimerRow>
               <CountdownTimer
-                durationSeconds={COUNTDOWN_TIMER_CONSTANTS.DEMO.DURATION_SECONDS}
+                durationSeconds={
+                  COUNTDOWN_TIMER_CONSTANTS.DEMO.DURATION_SECONDS
+                }
                 onComplete={handleCountdownComplete}
               />
             </HomePageStyles.CountdownTimerRow>
           </HomePageStyles.CardSection>
 
           <HomePageStyles.CardSection>
-            <Typography.Title level={4}>Doctor appointment cards</Typography.Title>
+            <Typography.Title level={4}>
+              Consultation details card
+            </Typography.Title>
+            <ConsultationDetailsCard {...HOME_CONSULTATION_DETAILS_CARD_DEMO} />
+          </HomePageStyles.CardSection>
+
+          <HomePageStyles.CardSection>
+            <Typography.Title level={4}>
+              Doctor appointment cards
+            </Typography.Title>
             <HomePageStyles.CardStack>
               <DoctorAppointmentCard
                 {...HOME_DOCTOR_APPOINTMENT_CARD_DEMOS.SHORT}
@@ -400,7 +441,9 @@ export default function HomePage() {
           </HomePageStyles.CardSection>
 
           <HomePageStyles.CardSection>
-            <Typography.Title level={4}>Option select (single)</Typography.Title>
+            <Typography.Title level={4}>
+              Option select (single)
+            </Typography.Title>
             <OptionSelectGroup
               name={VERIFYING_FOR_FORM_KEY}
               value={verifyingForValue}
@@ -413,12 +456,17 @@ export default function HomePage() {
             />
             <Typography.Text type="secondary">
               Selected:{" "}
-              {formatOptionSelectDisplayValue(verifyingForValue, OPTION_SELECT_MODES.SINGLE)}
+              {formatOptionSelectDisplayValue(
+                verifyingForValue,
+                OPTION_SELECT_MODES.SINGLE
+              )}
             </Typography.Text>
           </HomePageStyles.CardSection>
 
           <HomePageStyles.CardSection>
-            <Typography.Title level={4}>Option select (multiple)</Typography.Title>
+            <Typography.Title level={4}>
+              Option select (multiple)
+            </Typography.Title>
             <OptionSelectGroup
               name={VERIFYING_FOR_MULTI_FORM_KEY}
               value={verifyingForMultiValue}
@@ -433,13 +481,15 @@ export default function HomePage() {
               Selected:{" "}
               {formatOptionSelectDisplayValue(
                 verifyingForMultiValue,
-                OPTION_SELECT_MODES.MULTIPLE,
+                OPTION_SELECT_MODES.MULTIPLE
               )}
             </Typography.Text>
           </HomePageStyles.CardSection>
 
           <HomePageStyles.CardSection>
-            <Typography.Title level={4}>Selectable service cards</Typography.Title>
+            <Typography.Title level={4}>
+              Selectable service cards
+            </Typography.Title>
             <HomePageStyles.SelectableCardRow>
               <SelectableServiceCard
                 {...HOME_SELECTABLE_SERVICE_CARD_DEMOS.INSTANT}
@@ -453,7 +503,9 @@ export default function HomePage() {
               />
             </HomePageStyles.SelectableCardRow>
             {consultationTypeError ? (
-              <Typography.Text type="danger">{consultationTypeError}</Typography.Text>
+              <Typography.Text type="danger">
+                {consultationTypeError}
+              </Typography.Text>
             ) : null}
             <Typography.Text type="secondary">
               Selected:{" "}
@@ -482,7 +534,9 @@ export default function HomePage() {
           </HomePageStyles.CardSection>
 
           <HomePageStyles.CardSection>
-            <Typography.Title level={4}>Service navigation cards</Typography.Title>
+            <Typography.Title level={4}>
+              Service navigation cards
+            </Typography.Title>
             <HomePageStyles.CardStack>
               <ServiceNavigationCard
                 {...HOME_SERVICE_NAVIGATION_CARD_DEMOS.CONSULTATION_HISTORY}
@@ -510,7 +564,9 @@ export default function HomePage() {
           </HomePageStyles.CardSection>
 
           <HomePageStyles.CardSection>
-            <Typography.Title level={4}>Consultation fee cards</Typography.Title>
+            <Typography.Title level={4}>
+              Consultation fee cards
+            </Typography.Title>
             <HomePageStyles.IconInfoCardRow>
               <ConsultationFeeCard
                 {...HOME_CONSULTATION_FEE_CARD_DEMOS.WITH_INSURANCE}
@@ -539,7 +595,9 @@ export default function HomePage() {
           </HomePageStyles.CardSection>
 
           <HomePageStyles.CardSection>
-            <Typography.Title level={4}>Doctor appointment booking</Typography.Title>
+            <Typography.Title level={4}>
+              Doctor appointment booking
+            </Typography.Title>
             <HomePageStyles.BookingShowcaseShell>
               <HomePageStyles.BookingShowcasePanel>
                 <DoctorAppointmentBooking

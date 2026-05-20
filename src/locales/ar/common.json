@@ -159,5 +159,15 @@
     "errors": {
       "selectMethodRequired": "يرجى اختيار طريقة دفع."
     }
+  },
+  "consultationDetails": {
+    "labels": {
+      "consultationId": "رقم الاستشارة",
+      "patientName": "اسم المريض",
+      "consultationDateTime": "تاريخ ووقت الاستشارة",
+      "consultationType": "نوع الاستشارة",
+      "consultationDuration": "مدة الاستشارة",
+      "paymentType": "نوع الدفع"
+    }
   }
 }

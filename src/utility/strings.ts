@@ -254,6 +254,16 @@ export const TRANSLATION_KEYS = {
       GENDER_REQUIRED: "patientProfile.errors.genderRequired",
     },
   },
+  CONSULTATION_DETAILS: {
+    LABELS: {
+      CONSULTATION_ID: "consultationDetails.labels.consultationId",
+      PATIENT_NAME: "consultationDetails.labels.patientName",
+      CONSULTATION_DATE_TIME: "consultationDetails.labels.consultationDateTime",
+      CONSULTATION_TYPE: "consultationDetails.labels.consultationType",
+      CONSULTATION_DURATION: "consultationDetails.labels.consultationDuration",
+      PAYMENT_TYPE: "consultationDetails.labels.paymentType",
+    },
+  },
 } as const;
 
 export const LAYOUT_NAV_LINKS = [

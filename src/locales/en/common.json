@@ -159,5 +159,15 @@
     "errors": {
       "selectMethodRequired": "Please select a payment method."
     }
+  },
+  "consultationDetails": {
+    "labels": {
+      "consultationId": "Consultation ID",
+      "patientName": "Patient Name",
+      "consultationDateTime": "Consultation Date & Time",
+      "consultationType": "Consultation Type",
+      "consultationDuration": "Consultation Duration",
+      "paymentType": "Payment Type"
+    }
   }
 }
