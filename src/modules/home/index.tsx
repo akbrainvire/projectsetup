@@ -13,6 +13,11 @@ import type { HomeConsultationContextValue } from "@/modules/home/type";
 import { resolveHomeNavCardIcon } from "@/modules/home/utility";
 import { useForm } from "@/hooks/useForm";
 import { TRANSLATION_KEYS } from "@/utility/strings";
+import CustomModal from "@/components/common/CustomModal";
+import GIF from "../../assets/gifs/medical-book.gif";
+import { Typography } from "antd";
+import InfoCard from "@/components/common/InfoCard";
+import { HOME_INFO_CARD_DEMO } from "@/constants/infoCardDemo";
 
 const homeKeys = TRANSLATION_KEYS.HOME;
 const formKeys = HOME_CONSTANTS.FORM_KEYS;
@@ -21,9 +26,9 @@ export function Home() {
   const { t } = useTranslation("common");
   const [isPageLoading, setIsPageLoading] = useState(true);
   const [isStartingVideoCall, setIsStartingVideoCall] = useState(false);
-  const [joiningAppointmentId, setJoiningAppointmentId] = useState<string | null>(
-    null
-  );
+  const [joiningAppointmentId, setJoiningAppointmentId] = useState<
+    string | null
+  >(null);
 
   const homeForm = useForm({
     [formKeys.CONSULTATION_CONTEXT]: {
@@ -100,6 +105,8 @@ export function Home() {
           {consultationContextError ? (
             <span role="alert">{consultationContextError}</span>
           ) : null}
+          <Typography.Title level={4}>Info card</Typography.Title>
+          <InfoCard {...HOME_INFO_CARD_DEMO} />
         </HomeStyles.HeroPrimary>
         <HomeStyles.NavColumn>
           {HOME_CONSTANTS.DEMO.NAV_CARDS?.map((card) => (
@@ -118,6 +125,14 @@ export function Home() {
             </HomeStyles.NavCardSlot>
           ))}
         </HomeStyles.NavColumn>
+        <CustomModal
+          isOpen={true}
+          onClose={() => {}}
+          icon={GIF.src}
+          title="Please wait while we verify your patient details with our healthcare provider."
+          description="This may take a few seconds. Please do not close the app or go back."
+          showButton={false}
+        />
       </HomeStyles.HeroSection>
       <HomeStyles.AppointmentsSection>
         <HomeStyles.SectionTitle>

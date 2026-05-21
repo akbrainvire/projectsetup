@@ -3,7 +3,7 @@
 import { CloseOutlined } from "@ant-design/icons";
 import type React from "react";
 import CustomButton from "@/components/common/CustomButton";
-import { customModalButtonDefaults as ModalButtonDefaults } from "@/components/common/CustomModal_AK/modalButtonDefaults";
+import { customModalButtonDefaults as ModalButtonDefaults } from "@/components/common/CustomModal/modalButtonDefaults";
 import { CustomModalStyles } from "@/components/common/CustomModal/styles";
 
 export type CustomModalProps = {
@@ -69,7 +69,9 @@ export default function CustomModal({
           </CustomModalStyles.CloseIconDiv>
         ) : null}
         {icon ? (
-          <CustomModalStyles.IconWrapper>{icon}</CustomModalStyles.IconWrapper>
+          <CustomModalStyles.IconWrapper>
+            {typeof icon === "string" ? <img src={icon} alt="" /> : icon}
+          </CustomModalStyles.IconWrapper>
         ) : null}
         <CustomModalStyles.ModalHeading>{title}</CustomModalStyles.ModalHeading>
         {description ? (

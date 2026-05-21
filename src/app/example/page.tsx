@@ -10,7 +10,6 @@ import CustomButton from "@/components/common/CustomButton";
 import DiscountCodeInput from "@/components/common/DiscountCodeInput";
 import IconInfoCard from "@/components/common/IconInfoCard";
 import Rating from "@/components/common/Rating";
-import ConsultationDetailsCard from "@/components/common/ConsultationDetailsCard";
 import ConsultationFeeCard from "@/components/doctor/ConsultationFeeCard";
 import DoctorAppointmentBooking from "@/components/doctor/DoctorAppointmentBooking";
 import DoctorAppointmentCard from "@/components/doctor/DoctorAppointmentCard";
@@ -40,7 +39,6 @@ import {
   HOME_SERVICE_NAVIGATION_CARD_DEMOS,
   HOME_VERIFYING_OPTIONS,
 } from "@/constants/homeDemo";
-import { HOME_CONSULTATION_DETAILS_CARD_DEMO } from "@/constants/consultationDetailsDemo";
 import {
   HOME_DOCTOR_BOOKING_AVAILABILITY,
   HOME_DOCTOR_BOOKING_AVAILABLE_DATES,
@@ -457,12 +455,7 @@ export default function ExamplePage() {
             </Typography.Text>
           </ExamplePageStyles.CardSection>
 
-          <ExamplePageStyles.CardSection>
-            <Typography.Title level={4}>
-              Consultation details card
-            </Typography.Title>
-            <ConsultationDetailsCard {...HOME_CONSULTATION_DETAILS_CARD_DEMO} />
-          </ExamplePageStyles.CardSection>
+          <ExamplePageStyles.CardSection></ExamplePageStyles.CardSection>
 
           <ExamplePageStyles.CardSection>
             <Typography.Title level={4}>
