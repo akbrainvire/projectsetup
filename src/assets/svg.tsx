@@ -434,6 +434,67 @@ const InfoIcon = (props: SvgIconProps) => (
   </svg>
 );
 
+const PatientVerificationIcon = (props: SvgIconProps) => (
+  <svg
+    width="112"
+    height="112"
+    viewBox="0 0 112 112"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    aria-hidden
+    {...props}
+  >
+    <path
+      d="M33.5 25.5h8.7l15-12h28.1c2.7 0 4.8 2.2 4.8 4.8s-2.2 4.8-4.8 4.8H62.2L46.4 35.7H33.5V25.5Z"
+      fill="white"
+      stroke="black"
+      strokeWidth="5"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M21.5 27.1h12v25.8h-12V27.1Z"
+      fill="white"
+      stroke="black"
+      strokeWidth="5"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M78.5 86.5h-8.7l-15 12H26.7c-2.7 0-4.8-2.2-4.8-4.8s2.2-4.8 4.8-4.8h23.1l15.8-12.6h12.9v10.2Z"
+      fill="white"
+      stroke="black"
+      strokeWidth="5"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M90.5 84.9h-12V59.1h12v25.8Z"
+      fill="white"
+      stroke="black"
+      strokeWidth="5"
+      strokeLinejoin="round"
+    />
+    <circle
+      cx="56"
+      cy="56"
+      r="28"
+      fill="white"
+      stroke="black"
+      strokeWidth="5"
+    />
+    <path
+      d="M50 39h12v11h11v12H62v11H50V62H39V50h11V39Z"
+      stroke="#00c7be"
+      strokeWidth="5"
+      strokeLinejoin="round"
+    />
+    <path
+      d="M95 39.5l5-2.8M98.2 48.3h6M92.3 31.9l2.8-5M16.8 72.5l-5 2.8M13.8 63.7h-6M19.7 80.1l-2.8 5"
+      stroke="#00c7be"
+      strokeWidth="5"
+      strokeLinecap="round"
+    />
+  </svg>
+);
+
 export const Icons = {
   AppLogoIcon,
   VideoIcon,
@@ -449,4 +510,5 @@ export const Icons = {
   CoveredCheckSVG,
   DiscountCheckSVG,
   InfoIcon,
+  PatientVerificationIcon,
 };

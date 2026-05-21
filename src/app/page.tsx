@@ -59,6 +59,8 @@ import type {
 import type { RootState } from "@/redux/store";
 import { SITE_COLORS, TRANSLATION_KEYS } from "@/utility/strings";
 import { HomePageStyles } from "@/app/styles";
+import CustomModal from "@/components/common/CustomModal";
+import GIF from "../assets/gifs/medical-book.gif";
 
 const VERIFYING_FOR_FORM_KEY = "verifyingFor";
 const VERIFYING_FOR_MULTI_FORM_KEY = "verifyingForMulti";
@@ -612,6 +614,14 @@ export default function HomePage() {
               </HomePageStyles.BookingShowcasePanel>
             </HomePageStyles.BookingShowcaseShell>
           </HomePageStyles.CardSection>
+          <CustomModal
+            isOpen={true}
+            onClose={() => {}}
+            icon={GIF.src}
+            title="Please wait while we verify your patient details with our healthcare provider."
+            description="This may take a few seconds. Please do not close the app or go back."
+            showButton={false}
+          />
         </HomePageStyles.Stack>
       </HomePageStyles.Main>
     </PageShell>

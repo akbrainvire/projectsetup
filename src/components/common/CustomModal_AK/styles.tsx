@@ -7,11 +7,12 @@ const Overlay = styled.div<{ $alignModal?: string }>`
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.72);
   display: flex;
   justify-content: center;
   align-items: ${({ $alignModal }) => $alignModal || "center"};
   z-index: 1000;
+  padding: 16px;
 `;
 
 const ModalContainer = styled.div<{
@@ -19,21 +20,23 @@ const ModalContainer = styled.div<{
   $height?: string;
 }>`
   background-color: ${c.WHITE};
-  width: ${({ $width }) => $width || "970px"};
-  padding: 0;
+  width: ${({ $width }) => $width || "424px"};
+  max-width: 100%;
+  padding: 40px 40px;
   position: relative;
-  height: ${({ $height }) => $height || "90%"};
+  min-height: ${({ $height }) => $height || "340px"};
+  height: auto;
   display: flex;
   flex-direction: column;
-
-  @media (max-width: 1033px) {
-    width: 90%;
-  }
+  align-items: center;
+  justify-content: center;
+  border-radius: 22px;
+  box-shadow: none;
 
   @media (max-width: 576px) {
-    width: 95%;
-    height: ${({ $height }) => $height || "95%"};
-    margin-top: 30px;
+    width: 100%;
+    min-height: ${({ $height }) => $height || "320px"};
+    padding: 32px 24px;
   }
 `;
 
@@ -51,28 +54,34 @@ const ModalHeadingContainer = styled.div`
 
 const CloseIconDiv = styled.div`
   position: absolute;
-  top: 17px;
-  right: 10px;
+  top: 18px;
+  right: 18px;
   cursor: pointer;
-  font-size: 22px;
+  font-size: 18px;
   line-height: 1;
   display: flex;
   align-items: center;
   justify-content: center;
+  color: ${c.GREY_4};
 
   .anticon {
-    font-size: 22px;
+    font-size: 18px;
   }
 `;
 
 const ModalHeading = styled.h2`
-  color: ${c.BLUE_1};
+  color: #414141;
   text-align: center;
   font-size: 16px;
+  font-weight: 800;
+  line-height: 22px;
   margin: 0;
+  max-width: 360px;
+  font-family: Noto Sans;
+  font-style: ExtraBold;
 
   @media (max-width: 576px) {
-    font-size: 14px;
+    max-width: 100%;
   }
 `;
 
@@ -88,15 +97,9 @@ const HorizontalLine = styled.hr`
 `;
 
 const Content = styled.div`
-  padding: 10px 15px;
-  overflow-y: auto;
-  flex-grow: 1;
-  overflow-x: hidden;
-  scrollbar-width: thin;
-
-  @media (max-width: 576px) {
-    padding: 8px 12px;
-  }
+  width: 100%;
+  text-align: center;
+  margin-bottom: 18px;
 `;
 
 const Footer = styled.div`
@@ -113,17 +116,47 @@ const Footer = styled.div`
 
 const ButtonMainDiv = styled.div<{ $buttonDivWidth?: string }>`
   width: ${({ $buttonDivWidth }) => $buttonDivWidth || "100%"};
+  max-width: 343px;
   display: flex;
-  flex-direction: row;
   align-items: center;
-  justify-content: flex-end;
-  gap: 15px;
+  justify-content: center;
+  margin-top: 18px;
 `;
 
 const ButtonContainer = styled.section`
   width: 100%;
   display: flex;
   gap: 15px;
+`;
+
+const IconWrapper = styled.div`
+  width: 152px;
+  min-height: 152px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+
+  svg,
+  img {
+    max-width: 152px;
+    max-height: 152px;
+    width: auto;
+    height: auto;
+    display: block;
+    object-fit: contain;
+  }
+`;
+
+const Description = styled.p`
+  color: #414141;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  margin: 16px 0 0;
+  max-width: 360px;
+  font-family: Noto Sans;
 `;
 
 export const CustomModalStyles = {
@@ -137,4 +170,6 @@ export const CustomModalStyles = {
   Footer,
   ButtonMainDiv,
   ButtonContainer,
+  IconWrapper,
+  Description,
 };
