@@ -6,7 +6,7 @@ import type {
   OptionSelectMultipleValue,
   OptionSelectSingleValue,
   OptionSelectValue,
-} from "@/types/optionSelectGroup.types";
+} from "./types";
 
 export const toOptionSelectValue = (option: OptionSelectItem): OptionSelectValue => ({
   label: option.label,

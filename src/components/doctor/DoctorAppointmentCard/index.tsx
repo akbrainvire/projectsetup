@@ -7,7 +7,7 @@ import {
   DOCTOR_APPOINTMENT_CARD_DEFAULTS,
   DOCTOR_APPOINTMENT_CARD_TYPOGRAPHY,
 } from "@/constants/cards";
-import type { DoctorAppointmentCardProps } from "@/types/doctorAppointmentCard.types";
+import type { DoctorAppointmentCardProps } from "./types";
 import { SITE_COLORS } from "@/utility/strings";
 import { DoctorAppointmentCardStyles } from "./styles";
 
@@ -90,4 +90,4 @@ export default function DoctorAppointmentCard({
   );
 }
 
-export type { DoctorAppointmentCardProps } from "@/types/doctorAppointmentCard.types";
+export type { DoctorAppointmentCardProps } from "./types";

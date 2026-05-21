@@ -4,7 +4,7 @@ import { OPTION_SELECT_MODES } from "@/constants/optionSelectGroup";
 import type {
   OptionSelectGroupProps,
   OptionSelectItem,
-} from "@/types/optionSelectGroup.types";
+} from "./types";
 import {
   isOptionSelected,
   resolveNextValue,
@@ -89,4 +89,4 @@ export default function OptionSelectGroup({
   );
 }
 
-export type { OptionSelectGroupProps } from "@/types/optionSelectGroup.types";
+export type { OptionSelectGroupProps } from "./types";

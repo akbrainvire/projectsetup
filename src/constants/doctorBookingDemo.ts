@@ -1,4 +1,4 @@
-import type { AppointmentTimeSlot } from "@/types/doctorAppointmentBooking.types";
+import type { AppointmentTimeSlot } from "@/components/doctor/DoctorAppointmentBooking/types";
 import { DOCTOR_APPOINTMENT_BOOKING_SLOT_PERIODS } from "@/constants/doctorAppointmentBooking";
 
 const MORNING_SLOTS: AppointmentTimeSlot[] = [

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { SELECTABLE_SERVICE_CARD_DEFAULTS } from "@/constants/selectableServiceCard";
 import { NotoSansFont } from "@/styles/fonts";
-import type { ResolvedSelectableServiceCardAppearance } from "@/types/selectableServiceCard.types";
+import type { ResolvedSelectableServiceCardAppearance } from "./types";
 
 const checkDefaults = SELECTABLE_SERVICE_CARD_DEFAULTS;
 

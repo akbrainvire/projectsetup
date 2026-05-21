@@ -5,7 +5,7 @@ import stcPayImage from "@/assets/Payment/stcpay.png";
 import tabbyImage from "@/assets/Payment/tabby.png";
 import tamaraImage from "@/assets/Payment/tamara.png";
 import { TRANSLATION_KEYS } from "@/utility/strings";
-import type { PaymentMethodOption } from "@/types/payment.types";
+import type { PaymentMethodOption } from "@/modules/payment/types";
 
 export const PAYMENT_METHOD_KEYS = {
   CREDIT_CARD: "creditCard",

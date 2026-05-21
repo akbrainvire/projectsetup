@@ -7,7 +7,7 @@ import {
   COUNTDOWN_TIMER_DEFAULTS,
   COUNTDOWN_TIMER_FALLBACKS,
 } from "@/constants/countdownTimer";
-import type { CountdownTimerProps } from "@/types/countdownTimer.types";
+import type { CountdownTimerProps } from "./types";
 import { CountdownTimerStyles } from "./styles";
 
 const padTime = (value: number) =>
@@ -94,4 +94,4 @@ CountdownTimer.displayName = "CountdownTimer";
 
 export default CountdownTimer;
 
-export type { CountdownTimerProps } from "@/types/countdownTimer.types";
+export type { CountdownTimerProps } from "./types";

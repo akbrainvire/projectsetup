@@ -7,7 +7,7 @@ import {
 import type {
   OptionSelectAppearance,
   ResolvedOptionSelectAppearance,
-} from "@/types/optionSelectGroup.types";
+} from "./types";
 
 export const resolveOptionSelectAppearance = (
   appearance?: OptionSelectAppearance,

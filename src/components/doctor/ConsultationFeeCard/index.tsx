@@ -4,7 +4,7 @@ import { Icons } from "@/assets/svg";
 import CustomButton from "@/components/common/CustomButton";
 import { BUTTON_VARIANTS } from "@/constants/button";
 import { CONSULTATION_FEE_CARD_DEFAULTS } from "@/constants/consultationFeeCard";
-import type { ConsultationFeeCardProps } from "@/types/consultationFeeCard.types";
+import type { ConsultationFeeCardProps } from "./types";
 import { SITE_COLORS } from "@/utility/strings";
 import { ConsultationFeeCardStyles } from "./styles";
 
@@ -94,4 +94,4 @@ export default function ConsultationFeeCard({
   );
 }
 
-export type { ConsultationFeeCardProps } from "@/types/consultationFeeCard.types";
+export type { ConsultationFeeCardProps } from "./types";

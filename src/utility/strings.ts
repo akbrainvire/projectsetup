@@ -10,6 +10,7 @@ export type LanguageCode = (typeof LANGUAGE_KEYS)[keyof typeof LANGUAGE_KEYS];
 
 export const ROUTES = {
   HOME: "/",
+  EXAMPLE: "/example",
   AUTH: {
     SIGN_IN: "/auth/sign-in",
   },
@@ -55,6 +56,9 @@ export const SITE_COLORS = {
   PURPLE_PRIMARY: "#8358FA",
   PURPLE_TINT_BG: "#E5DDFF",
   COUNTDOWN_CARD_SHADOW: "0 2px 8px rgba(131, 88, 250, 0.08)",
+  AMBER: "#FFB400",
+  LIGHT_GREY: "#D3D3D3",
+  AMBER_TRANSLUCENT: "rgba(255, 180, 0, 0.35)",
 } as const;
 
 export const STYLED_COMPONENTS_THEME = {
@@ -106,6 +110,7 @@ export const TRANSLATION_KEYS = {
   LAYOUT: {
     PRODUCT: "layout.product",
     NAV_HOME: "layout.navHome",
+    NAV_EXAMPLE: "layout.navExample",
     CONTACT: "layout.contact",
     FOOTER: "layout.footer",
     LANGUAGE: "layout.language",
@@ -264,10 +269,24 @@ export const TRANSLATION_KEYS = {
       PAYMENT_TYPE: "consultationDetails.labels.paymentType",
     },
   },
+  RATING: {
+    LABEL: "rating.label",
+    ARIA: {
+      GROUP: "rating.aria.group",
+      STAR: "rating.aria.star",
+      VALUE: "rating.aria.value",
+    },
+    SHOWCASE: {
+      TITLE: "rating.showcase.title",
+      INTERACTIVE: "rating.showcase.interactive",
+      READ_ONLY: "rating.showcase.readOnly",
+    },
+  },
 } as const;
 
 export const LAYOUT_NAV_LINKS = [
   { href: ROUTES.HOME, labelKey: TRANSLATION_KEYS.LAYOUT.NAV_HOME },
+  { href: ROUTES.EXAMPLE, labelKey: TRANSLATION_KEYS.LAYOUT.NAV_EXAMPLE },
 ] as const;
 
 export const LAYOUT_CONTACT_HREF = ROUTES.HOME;

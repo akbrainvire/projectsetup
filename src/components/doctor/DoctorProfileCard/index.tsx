@@ -3,7 +3,7 @@
 import {
   DOCTOR_PROFILE_CARD_DEFAULTS,
 } from "@/constants/doctorProfileCard";
-import type { DoctorProfileCardProps } from "@/types/doctorProfileCard.types";
+import type { DoctorProfileCardProps } from "./types";
 import DoctorProfileAvatar from "./primitives/DoctorProfileAvatar";
 import DoctorProfileAvailabilityBadge from "./primitives/DoctorProfileAvailabilityBadge";
 import { DoctorProfileCardSharedStyles } from "./primitives/sharedStyles";
@@ -85,4 +85,4 @@ export default function DoctorProfileCard({
   );
 }
 
-export type { DoctorProfileCardProps } from "@/types/doctorProfileCard.types";
+export type { DoctorProfileCardProps } from "./types";

@@ -10,6 +10,7 @@
   "layout": {
     "product": "UP-DCS",
     "navHome": "الرئيسية",
+    "navExample": "أمثلة",
     "contact": "اتصل بنا",
     "footer": "UP-DCS",
     "language": "اللغة"
@@ -168,6 +169,19 @@
       "consultationType": "نوع الاستشارة",
       "consultationDuration": "مدة الاستشارة",
       "paymentType": "نوع الدفع"
+    }
+  },
+  "rating": {
+    "label": "قيّم",
+    "aria": {
+      "group": "تقييم",
+      "star": "{{value}} من {{max}} نجوم",
+      "value": "{{value}} من {{max}}"
+    },
+    "showcase": {
+      "title": "التقييم",
+      "interactive": "تفاعلي",
+      "readOnly": "للقراءة فقط"
     }
   }
 }

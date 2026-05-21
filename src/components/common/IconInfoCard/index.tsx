@@ -1,6 +1,6 @@
 "use client";
 
-import type { IconInfoCardProps } from "@/types/iconInfoCard.types";
+import type { IconInfoCardProps } from "./types";
 import { IconInfoCardStyles } from "./styles";
 
 export default function IconInfoCard({
@@ -34,4 +34,4 @@ export default function IconInfoCard({
   );
 }
 
-export type { IconInfoCardProps } from "@/types/iconInfoCard.types";
+export type { IconInfoCardProps } from "./types";

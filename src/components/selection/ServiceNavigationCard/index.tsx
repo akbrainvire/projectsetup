@@ -1,7 +1,7 @@
 "use client";
 
 import { Icons } from "@/assets/svg";
-import type { ServiceNavigationCardProps } from "@/types/serviceNavigationCard.types";
+import type { ServiceNavigationCardProps } from "./types";
 import { ServiceNavigationCardStyles } from "./styles";
 
 export default function ServiceNavigationCard({
@@ -46,4 +46,4 @@ export default function ServiceNavigationCard({
   );
 }
 
-export type { ServiceNavigationCardProps } from "@/types/serviceNavigationCard.types";
+export type { ServiceNavigationCardProps } from "./types";

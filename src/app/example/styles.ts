@@ -88,7 +88,15 @@ const BookingShowcasePanel = styled.div`
   }
 `;
 
-export const HomePageStyles = {
+const RatingRow = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 32px;
+  width: 100%;
+`;
+
+export const ExamplePageStyles = {
   Main,
   Stack,
   ButtonSection,
@@ -101,4 +109,5 @@ export const HomePageStyles = {
   CountdownTimerRow,
   BookingShowcaseShell,
   BookingShowcasePanel,
+  RatingRow,
 };

@@ -19,7 +19,7 @@ import type {
   AppointmentTimeSlot,
   DoctorAppointmentBookingLabels,
   DoctorAppointmentBookingProps,
-} from "@/types/doctorAppointmentBooking.types";
+} from "./types";
 import {
   buildAvailableDatesSet,
   filterBookableAppointmentSlots,

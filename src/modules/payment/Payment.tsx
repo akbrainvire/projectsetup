@@ -14,7 +14,7 @@ import {
 import type {
   PaymentMethodId,
   PaymentMethodOption,
-} from "@/types/payment.types";
+} from "./types";
 import { TRANSLATION_KEYS } from "@/utility/strings";
 import { PaymentStyles as S } from "./styles";
 

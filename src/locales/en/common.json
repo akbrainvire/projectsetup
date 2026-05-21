@@ -10,6 +10,7 @@
   "layout": {
     "product": "UP-DCS",
     "navHome": "Home",
+    "navExample": "Examples",
     "contact": "Contact",
     "footer": "UP-DCS",
     "language": "Language"
@@ -168,6 +169,19 @@
       "consultationType": "Consultation Type",
       "consultationDuration": "Consultation Duration",
       "paymentType": "Payment Type"
+    }
+  },
+  "rating": {
+    "label": "Rate",
+    "aria": {
+      "group": "Rating",
+      "star": "{{value}} out of {{max}} stars",
+      "value": "{{value}} of {{max}}"
+    },
+    "showcase": {
+      "title": "Rating",
+      "interactive": "Interactive",
+      "readOnly": "Read only"
     }
   }
 }

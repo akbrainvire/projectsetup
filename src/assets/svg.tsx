@@ -434,64 +434,32 @@ const InfoIcon = (props: SvgIconProps) => (
   </svg>
 );
 
-const PatientVerificationIcon = (props: SvgIconProps) => (
+const RatingStarSVG = (props: SvgIconProps) => (
   <svg
-    width="112"
-    height="112"
-    viewBox="0 0 112 112"
+    width="16"
+    height="16"
+    viewBox="0 0 16 16"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
     aria-hidden
     {...props}
   >
-    <path
-      d="M33.5 25.5h8.7l15-12h28.1c2.7 0 4.8 2.2 4.8 4.8s-2.2 4.8-4.8 4.8H62.2L46.4 35.7H33.5V25.5Z"
-      fill="white"
-      stroke="black"
-      strokeWidth="5"
-      strokeLinejoin="round"
-    />
-    <path
-      d="M21.5 27.1h12v25.8h-12V27.1Z"
-      fill="white"
-      stroke="black"
-      strokeWidth="5"
-      strokeLinejoin="round"
-    />
-    <path
-      d="M78.5 86.5h-8.7l-15 12H26.7c-2.7 0-4.8-2.2-4.8-4.8s2.2-4.8 4.8-4.8h23.1l15.8-12.6h12.9v10.2Z"
-      fill="white"
-      stroke="black"
-      strokeWidth="5"
-      strokeLinejoin="round"
-    />
-    <path
-      d="M90.5 84.9h-12V59.1h12v25.8Z"
-      fill="white"
-      stroke="black"
-      strokeWidth="5"
-      strokeLinejoin="round"
-    />
-    <circle
-      cx="56"
-      cy="56"
-      r="28"
-      fill="white"
-      stroke="black"
-      strokeWidth="5"
-    />
-    <path
-      d="M50 39h12v11h11v12H62v11H50V62H39V50h11V39Z"
-      stroke="#00c7be"
-      strokeWidth="5"
-      strokeLinejoin="round"
-    />
-    <path
-      d="M95 39.5l5-2.8M98.2 48.3h6M92.3 31.9l2.8-5M16.8 72.5l-5 2.8M13.8 63.7h-6M19.7 80.1l-2.8 5"
-      stroke="#00c7be"
-      strokeWidth="5"
-      strokeLinecap="round"
-    />
+    <g clipPath="url(#clip0_140_528)">
+      <path
+        d="M0.042078 6.13727C0.147257 5.81329 0.434154 5.58392 0.772239 5.55328L5.38355 5.13396L7.20597 0.860452C7.34052 0.546482 7.64667 0.343842 7.98744 0.343842C8.3282 0.343842 8.63448 0.546482 8.76818 0.860452L10.5906 5.13396L15.2026 5.55328C15.5407 5.58453 15.827 5.8139 15.9328 6.13727C16.038 6.46125 15.9408 6.81661 15.6851 7.04122L12.1994 10.1027L13.2271 14.6367C13.3023 14.9701 13.1732 15.3148 12.897 15.5147C12.7485 15.6228 12.5741 15.6767 12.3991 15.6767C12.2487 15.6767 12.0982 15.6367 11.9638 15.5561L7.98744 13.1747L4.01183 15.5561C3.72018 15.7307 3.35346 15.7147 3.07789 15.5147C2.80172 15.3148 2.67253 14.9701 2.74773 14.6367L3.77551 10.1027L0.28973 7.04122C0.0341558 6.81661 -0.0631008 6.46199 0.042078 6.13727Z"
+        fill="currentColor"
+      />
+    </g>
+    <defs>
+      <clipPath id="clip0_140_528">
+        <rect
+          width="15.9743"
+          height="16"
+          fill="white"
+          transform="matrix(-1 0 0 1 15.9746 0)"
+        />
+      </clipPath>
+    </defs>
   </svg>
 );
 
@@ -510,5 +478,5 @@ export const Icons = {
   CoveredCheckSVG,
   DiscountCheckSVG,
   InfoIcon,
-  PatientVerificationIcon,
+  RatingStarSVG,
 };

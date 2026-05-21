@@ -1,11 +1,11 @@
-export const INFO_CARD_DEFAULTS = {
+export const CONSULTATION_DETAILS_CARD_DEFAULTS = {
   PADDING: "24px",
   BORDER_RADIUS: "16px",
   GAP: "16px",
   COLUMN_GAP: "24px",
 } as const;
 
-export const INFO_CARD_TYPOGRAPHY = {
+export const CONSULTATION_DETAILS_CARD_TYPOGRAPHY = {
   LABEL: {
     FONT_SIZE: "10px",
     FONT_WEIGHT: "600",

@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import type { PaymentMethodCardProps } from "@/types/payment.types";
+import type { PaymentMethodCardProps } from "./types";
 import { PaymentMethodCardStyles } from "./styles";
 
 const DEFAULT_IMAGE_HEIGHT = 22;
@@ -40,4 +40,4 @@ export default function PaymentMethodCard({
   );
 }
 
-export type { PaymentMethodCardProps } from "@/types/payment.types";
+export type { PaymentMethodCardProps } from "./types";

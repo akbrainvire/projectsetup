@@ -33,4 +33,3 @@ export interface DoctorAppointmentBookingProps {
   calendarValue?: string | null;
   onCalendarPanelChange?: (panelDate: string) => void;
 }
-

@@ -4,7 +4,7 @@ import { Icons } from "@/assets/svg";
 import {
   SELECTABLE_SERVICE_CARD_COLORS,
 } from "@/constants/selectableServiceCard";
-import type { SelectableServiceCardProps } from "@/types/selectableServiceCard.types";
+import type { SelectableServiceCardProps } from "./types";
 import { resolveSelectableServiceCardAppearance } from "./resolveSelectableServiceCardAppearance";
 import { SelectableServiceCardStyles } from "./styles";
 
@@ -97,4 +97,4 @@ export default function SelectableServiceCard({
   );
 }
 
-export type { SelectableServiceCardProps } from "@/types/selectableServiceCard.types";
+export type { SelectableServiceCardProps } from "./types";

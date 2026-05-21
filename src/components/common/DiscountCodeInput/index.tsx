@@ -4,7 +4,7 @@ import type { ChangeEvent } from "react";
 import { useTranslation } from "react-i18next";
 import { Icons } from "@/assets/svg";
 import { DISCOUNT_CODE_INPUT_STATES } from "@/constants/discountCodeInput";
-import type { DiscountCodeInputProps } from "@/types/discountCodeInput.types";
+import type { DiscountCodeInputProps } from "./types";
 import { TRANSLATION_KEYS } from "@/utility/strings";
 import { DiscountCodeInputStyles } from "./styles";
 
@@ -86,4 +86,4 @@ export default function DiscountCodeInput({
   );
 }
 
-export type { DiscountCodeInputProps } from "@/types/discountCodeInput.types";
+export type { DiscountCodeInputProps } from "./types";

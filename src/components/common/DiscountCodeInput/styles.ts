@@ -5,7 +5,7 @@ import {
   DISCOUNT_CODE_INPUT_TYPOGRAPHY,
 } from "@/constants/discountCodeInput";
 import { NotoSansFont } from "@/styles/fonts";
-import type { DiscountCodeInputState } from "@/types/discountCodeInput.types";
+import type { DiscountCodeInputState } from "./types";
 import { SITE_COLORS as c } from "@/utility/strings";
 
 const defaults = DISCOUNT_CODE_INPUT_DEFAULTS;

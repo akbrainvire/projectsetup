@@ -69,9 +69,7 @@ export default function CustomModal({
           </CustomModalStyles.CloseIconDiv>
         ) : null}
         {icon ? (
-          <CustomModalStyles.IconWrapper>
-            {typeof icon === "string" ? <img src={icon} alt="" /> : icon}
-          </CustomModalStyles.IconWrapper>
+          <CustomModalStyles.IconWrapper>{icon}</CustomModalStyles.IconWrapper>
         ) : null}
         <CustomModalStyles.ModalHeading>{title}</CustomModalStyles.ModalHeading>
         {description ? (

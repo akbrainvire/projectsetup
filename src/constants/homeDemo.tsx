@@ -1,11 +1,11 @@
 import { Icons } from "@/assets/svg";
-import type { ConsultationFeeCardProps } from "@/types/consultationFeeCard.types";
-import type { DoctorAppointmentCardProps } from "@/types/doctorAppointmentCard.types";
-import type { DoctorProfileCardProps } from "@/types/doctorProfileCard.types";
-import type { IconInfoCardProps } from "@/types/iconInfoCard.types";
-import type { OptionSelectItem } from "@/types/optionSelectGroup.types";
-import type { SelectableServiceCardProps } from "@/types/selectableServiceCard.types";
-import type { ServiceNavigationCardProps } from "@/types/serviceNavigationCard.types";
+import type { ConsultationFeeCardProps } from "@/components/doctor/ConsultationFeeCard/types";
+import type { DoctorAppointmentCardProps } from "@/components/doctor/DoctorAppointmentCard/types";
+import type { DoctorProfileCardProps } from "@/components/doctor/DoctorProfileCard/types";
+import type { IconInfoCardProps } from "@/components/common/IconInfoCard/types";
+import type { OptionSelectItem } from "@/components/selection/OptionSelectGroup/types";
+import type { SelectableServiceCardProps } from "@/components/selection/SelectableServiceCard/types";
+import type { ServiceNavigationCardProps } from "@/components/selection/ServiceNavigationCard/types";
 import { SELECTABLE_SERVICE_CARD_COLORS } from "@/constants/selectableServiceCard";
 import { SITE_COLORS } from "@/utility/strings";
 
@@ -168,3 +168,10 @@ export const HOME_VERIFYING_OPTIONS = [
   { label: "Parent", value: "parent" },
   { label: "Other", value: "other" },
 ] as const satisfies readonly OptionSelectItem[];
+
+export const HOME_RATING_DEMOS = {
+  INITIAL_VALUE: 0,
+  READ_ONLY_VALUE: 4,
+  MAX: 5,
+  SIZE: 18,
+} as const;

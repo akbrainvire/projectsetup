@@ -22,7 +22,7 @@ import type {
   ResolvedButtonMargin,
   StyledButtonStyleConfig,
   StyledButtonTextConfig,
-} from "@/types/button.types";
+} from "./types";
 
 const resolveVariant = (
   appearance: ButtonAppearanceConfig | undefined,

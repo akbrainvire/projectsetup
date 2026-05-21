@@ -8,7 +8,7 @@ import {
 import type {
   AppointmentSlotPeriod,
   AppointmentTimeSlot,
-} from "@/types/doctorAppointmentBooking.types";
+} from "@/components/doctor/DoctorAppointmentBooking/types";
 
 export const toAppointmentDateKey = (date: Dayjs | string | Date): string =>
   dayjs(date).format(DOCTOR_APPOINTMENT_BOOKING_DATE_FORMAT);

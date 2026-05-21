@@ -1,7 +1,7 @@
 "use client";
 
 import { NotoSansFont } from "@/styles/fonts";
-import type { StyledButtonStyleConfig, StyledButtonTextConfig } from "@/types/button.types";
+import type { StyledButtonStyleConfig, StyledButtonTextConfig } from "./types";
 import styled, { css } from "styled-components";
 
 const StyledButton = styled.button<{ $buttonStyle: StyledButtonStyleConfig }>`

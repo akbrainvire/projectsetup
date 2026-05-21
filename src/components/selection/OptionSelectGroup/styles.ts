@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { NotoSansFont } from "@/styles/fonts";
-import type { ResolvedOptionSelectAppearance } from "@/types/optionSelectGroup.types";
+import type { ResolvedOptionSelectAppearance } from "./types";
 
 const sans = NotoSansFont.style.fontFamily;
 

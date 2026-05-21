@@ -7,7 +7,7 @@ import {
 import type {
   ResolvedSelectableServiceCardAppearance,
   SelectableServiceCardAppearance,
-} from "@/types/selectableServiceCard.types";
+} from "./types";
 
 export const resolveSelectableServiceCardAppearance = (
   appearance?: SelectableServiceCardAppearance,

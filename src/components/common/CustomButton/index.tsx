@@ -1,7 +1,7 @@
 "use client";
 
 import { BUTTON_ICON_POSITIONS } from "@/constants/button";
-import type { CustomButtonProps } from "@/types/button.types";
+import type { CustomButtonProps } from "./types";
 import {
   buildStyledButtonConfig,
   buildStyledButtonTextConfig,
@@ -15,7 +15,7 @@ import {
 } from "./resolveButtonConfig";
 import { CustomButtonStyles } from "./styles";
 
-export type { CustomButtonProps } from "@/types/button.types";
+export type { CustomButtonProps } from "./types";
 
 export default function CustomButton(props: CustomButtonProps) {
   const {
