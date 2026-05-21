@@ -9,7 +9,7 @@ import CountdownTimer from "@/components/common/CountdownTimer";
 import CustomButton from "@/components/common/CustomButton";
 import DiscountCodeInput from "@/components/common/DiscountCodeInput";
 import IconInfoCard from "@/components/common/IconInfoCard";
-import ConsultationDetailsCard from "@/components/common/ConsultationDetailsCard";
+import InfoCard from "@/components/common/InfoCard";
 import ConsultationFeeCard from "@/components/doctor/ConsultationFeeCard";
 import DoctorAppointmentBooking from "@/components/doctor/DoctorAppointmentBooking";
 import DoctorAppointmentCard from "@/components/doctor/DoctorAppointmentCard";
@@ -38,7 +38,7 @@ import {
   HOME_SERVICE_NAVIGATION_CARD_DEMOS,
   HOME_VERIFYING_OPTIONS,
 } from "@/constants/homeDemo";
-import { HOME_CONSULTATION_DETAILS_CARD_DEMO } from "@/constants/consultationDetailsDemo";
+import { HOME_INFO_CARD_DEMO } from "@/constants/infoCardDemo";
 import {
   HOME_DOCTOR_BOOKING_AVAILABILITY,
   HOME_DOCTOR_BOOKING_AVAILABLE_DATES,
@@ -418,10 +418,8 @@ export default function HomePage() {
           </HomePageStyles.CardSection>
 
           <HomePageStyles.CardSection>
-            <Typography.Title level={4}>
-              Consultation details card
-            </Typography.Title>
-            <ConsultationDetailsCard {...HOME_CONSULTATION_DETAILS_CARD_DEMO} />
+            <Typography.Title level={4}>Info card</Typography.Title>
+            <InfoCard {...HOME_INFO_CARD_DEMO} />
           </HomePageStyles.CardSection>
 
           <HomePageStyles.CardSection>
