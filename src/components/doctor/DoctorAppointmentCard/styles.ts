@@ -5,6 +5,7 @@ import {
   DOCTOR_APPOINTMENT_CARD_GRADIENT,
   DOCTOR_APPOINTMENT_CARD_TYPOGRAPHY,
 } from "@/constants/cards";
+import { ellipsisTextStyles } from "@/styles/commonStyles";
 import { NotoSansFont } from "@/styles/fonts";
 import { SITE_COLORS as c } from "@/utility/strings";
 
@@ -60,11 +61,7 @@ const DoctorInfo = styled.div`
 `;
 
 const EllipsisText = styled.span`
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  min-width: 0;
-  display: block;
+  ${ellipsisTextStyles}
   font-family: ${sans};
   letter-spacing: 0;
 `;

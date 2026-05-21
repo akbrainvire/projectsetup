@@ -7,6 +7,12 @@
   "errors": {
     "thisFieldIsRequired": "This field is required"
   },
+  "common": {
+    "datePicker": {
+      "dateFormatPlaceholder": "DD/MM/YYYY",
+      "yearFormatPlaceholder": "YYYY"
+    }
+  },
   "layout": {
     "product": "UP-DCS",
     "navHome": "Home",
@@ -16,6 +22,45 @@
     "language": "Language"
   },
   "home": {
+    "greeting": "Hello, {{name}}",
+    "loader": {
+      "label": "Loading your dashboard…",
+      "joining": "Joining call…"
+    },
+    "hero": {
+      "title": "Consult a Physician",
+      "description": "Connect with specialized doctors in under 15 minutes for expert medical advice and digital prescriptions.",
+      "badge": "Available Now",
+      "action": "Start Video Call"
+    },
+    "navigation": {
+      "consultationHistory": {
+        "title": "Consultation History",
+        "subtitle": "Previous doctor visits"
+      },
+      "orders": {
+        "title": "Orders",
+        "subtitle": "Prescriptions & health kits"
+      }
+    },
+    "appointments": {
+      "sectionTitle": "Upcoming Appointments",
+      "forLabel": "For",
+      "actions": {
+        "joinCall": "Join Call"
+      },
+      "demo": {
+        "doctorName": "Dr. Al-Zahraw",
+        "specialty": "Cardiologist",
+        "appointmentType": "Video Call",
+        "patientForMyself": "Myself",
+        "patientForAlexander": "Alexander Josh",
+        "appointmentTime": "Today, 2:30 PM"
+      }
+    },
+    "form": {
+      "defaultContextLabel": "Consultation for"
+    },
     "title": "Home",
     "description": "Minimal Next.js scaffold.",
     "buttons": {
@@ -24,6 +69,9 @@
       "secondary": "Start Video Call",
       "custom": "Custom action"
     }
+  },
+  "loader": {
+    "label": "Loading…"
   },
   "language": {
     "english": "English",

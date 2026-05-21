@@ -4,7 +4,7 @@ import { CloseOutlined } from "@ant-design/icons";
 import type React from "react";
 import CustomButton from "@/components/common/CustomButton";
 import { customModalButtonDefaults as ModalButtonDefaults } from "@/components/common/CustomModal_AK/modalButtonDefaults";
-import { CustomModalStyles } from "@/components/common/CustomModal_AK/styles";
+import { CustomModalStyles } from "@/components/common/CustomModal/styles";
 
 export type CustomModalProps = {
   isOpen: boolean;

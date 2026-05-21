@@ -1,16 +1,17 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import DiscountCodeInput from "@/components/common/DiscountCodeInput";
+import Loader from "@/components/common/Loader";
 import PaymentMethodCard from "@/components/common/PaymentMethodCard";
 import ConsultationFeeCard from "@/components/doctor/ConsultationFeeCard";
 import { DISCOUNT_CODE_INPUT_STATES } from "@/constants/discountCodeInput";
+import { useForm } from "@/hooks/useForm";
 import {
-  PAYMENT_FEE_VALUES,
-  PAYMENT_METHOD_KEYS,
+  PAYMENT_CONSTANTS,
   PAYMENT_METHOD_OPTIONS,
-} from "@/constants/payment";
+} from "@/modules/payment/constant";
 import type {
   PaymentMethodId,
   PaymentMethodOption,
@@ -19,20 +20,43 @@ import { TRANSLATION_KEYS } from "@/utility/strings";
 import { PaymentStyles as S } from "./styles";
 
 const paymentKeys = TRANSLATION_KEYS.PAYMENT;
-const VALID_DISCOUNT_CODE = "COUPON";
-const INITIAL_PAYMENT_METHOD: PaymentMethodId = PAYMENT_METHOD_KEYS.APPLE_PAY;
+const VALID_DISCOUNT_CODE = PAYMENT_CONSTANTS.VALID_DISCOUNT_CODE;
+const INITIAL_PAYMENT_METHOD: PaymentMethodId =
+  PAYMENT_CONSTANTS.INITIAL_METHOD_KEY as PaymentMethodId;
+const paymentMethodFormKey = PAYMENT_CONSTANTS.FORM_KEYS.PAYMENT_METHOD;
 
 export function Payment() {
   const { t } = useTranslation("common");
-
-  const [selectedMethodId, setSelectedMethodId] = useState<PaymentMethodId>(
-    INITIAL_PAYMENT_METHOD,
-  );
+  const [isPageLoading, setIsPageLoading] = useState(true);
   const [discountCodeValue, setDiscountCodeValue] = useState("");
   const [submittedDiscountCode, setSubmittedDiscountCode] = useState<
     string | null
   >(null);
   const [isProcessing, setIsProcessing] = useState(false);
+
+  const paymentForm = useForm({
+    [paymentMethodFormKey]: {
+      value: INITIAL_PAYMENT_METHOD,
+      error: "",
+      required: true,
+    },
+  });
+
+  const selectedMethodId = paymentForm.values[
+    paymentMethodFormKey
+  ] as PaymentMethodId;
+  const paymentMethodError = String(
+    paymentForm.errors[paymentMethodFormKey] ?? ""
+  );
+
+  useEffect(() => {
+    const timer = window.setTimeout(() => {
+      setIsPageLoading(false);
+    }, PAYMENT_CONSTANTS.LOADER_SIMULATION_MS);
+    return () => {
+      window.clearTimeout(timer);
+    };
+  }, []);
 
   const discountCodeState = useMemo(() => {
     if (
@@ -48,7 +72,7 @@ export function Payment() {
   }, [discountCodeValue, submittedDiscountCode]);
 
   const handleSelectMethod = (id: string) => {
-    setSelectedMethodId(id as PaymentMethodId);
+    paymentForm.handleOnValueChange(id, paymentMethodFormKey);
   };
 
   const handleDiscountChange = (nextValue: string) => {
@@ -64,15 +88,26 @@ export function Payment() {
     setSubmittedDiscountCode(null);
   };
 
-  const handlePayNow = () => {
-    setIsProcessing(true);
-    setTimeout(() => {
-      setIsProcessing(false);
-    }, 800);
-  };
+  const handlePayNow = useCallback(() => {
+    paymentForm.validateSpecificFields(
+      [paymentMethodFormKey],
+      (_values: unknown, validationErrors: Record<string, string> | null) => {
+        if (validationErrors) {
+          return;
+        }
+        setIsProcessing(true);
+        setTimeout(() => {
+          setIsProcessing(false);
+        }, PAYMENT_CONSTANTS.LOADER_SIMULATION_MS);
+      }
+    );
+  }, [paymentForm]);
 
   return (
     <S.Page>
+      {isPageLoading ? (
+        <Loader overlay label={t(TRANSLATION_KEYS.LOADER.LABEL)} />
+      ) : null}
       <S.Container>
         <S.Header>
           <S.Title>{t(paymentKeys.TITLE)}</S.Title>
@@ -95,6 +130,9 @@ export function Payment() {
                 />
               ))}
             </S.MethodsList>
+            {paymentMethodError ? (
+              <S.ErrorMessage role="alert">{paymentMethodError}</S.ErrorMessage>
+            ) : null}
 
             <S.DiscountSlot>
               <DiscountCodeInput
@@ -110,15 +148,15 @@ export function Payment() {
           <S.FeeColumn>
             <ConsultationFeeCard
               totalLabel={t(paymentKeys.FEE.TOTAL_LABEL)}
-              totalAmount={PAYMENT_FEE_VALUES.TOTAL_AMOUNT}
+              totalAmount={PAYMENT_CONSTANTS.FEE_VALUES.TOTAL_AMOUNT}
               insurance={{
                 label: t(paymentKeys.FEE.INSURANCE_LABEL),
-                amount: PAYMENT_FEE_VALUES.INSURANCE_AMOUNT,
+                amount: PAYMENT_CONSTANTS.FEE_VALUES.INSURANCE_AMOUNT,
               }}
               deductible={{
                 title: t(paymentKeys.FEE.DEDUCTIBLE_TITLE),
                 subtitle: t(paymentKeys.FEE.DEDUCTIBLE_SUBTITLE),
-                amount: PAYMENT_FEE_VALUES.DEDUCTIBLE_AMOUNT,
+                amount: PAYMENT_CONSTANTS.FEE_VALUES.DEDUCTIBLE_AMOUNT,
               }}
               action={{
                 label: t(paymentKeys.ACTIONS.PAY_NOW),

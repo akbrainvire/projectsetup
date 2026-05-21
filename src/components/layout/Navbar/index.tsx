@@ -28,7 +28,10 @@ export default function Navbar({ className }: NavbarProps) {
   return (
     <NavbarStyles.Bar className={className}>
       <NavbarStyles.Inner>
-        <NavbarStyles.BrandLink href={ROUTES.HOME} aria-label={t(TRANSLATION_KEYS.LAYOUT.PRODUCT)}>
+        <NavbarStyles.BrandLink
+          href={ROUTES.HOME_DASHBOARD}
+          aria-label={t(TRANSLATION_KEYS.LAYOUT.PRODUCT)}
+        >
           <NavbarStyles.LogoIcon aria-hidden />
         </NavbarStyles.BrandLink>
         <NavbarStyles.LanguageSelectWrapper>

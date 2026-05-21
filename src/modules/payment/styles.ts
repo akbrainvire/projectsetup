@@ -1,16 +1,18 @@
 import styled from "styled-components";
 import { NAVBAR_DEFAULTS } from "@/constants/navbar";
-import { PAYMENT_DEFAULTS, PAYMENT_TYPOGRAPHY } from "@/constants/payment";
+import { PAYMENT_CONSTANTS } from "@/modules/payment/constant";
 import { NotoSansFont } from "@/styles/fonts";
 import { SITE_COLORS as c } from "@/utility/strings";
 
-const defaults = PAYMENT_DEFAULTS;
-const titleType = PAYMENT_TYPOGRAPHY.TITLE;
-const subtitleType = PAYMENT_TYPOGRAPHY.SUBTITLE;
+const defaults = PAYMENT_CONSTANTS.DEFAULTS;
+const titleType = PAYMENT_CONSTANTS.TYPOGRAPHY.TITLE;
+const subtitleType = PAYMENT_CONSTANTS.TYPOGRAPHY.SUBTITLE;
 const sans = NotoSansFont.style.fontFamily;
 const horizontalPadding = NAVBAR_DEFAULTS.HORIZONTAL_PADDING;
 
 const Page = styled.main`
+  position: relative;
+  isolation: isolate;
   width: 100%;
   min-height: 100vh;
   padding: ${defaults.PAGE_VERTICAL_PADDING} ${horizontalPadding}

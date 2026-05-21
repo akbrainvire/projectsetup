@@ -1,13 +1,10 @@
 import styled, { css } from "styled-components";
-import {
-  PAYMENT_METHOD_OPTION_DEFAULTS,
-  PAYMENT_TYPOGRAPHY,
-} from "@/constants/payment";
+import { PAYMENT_METHOD_CARD_CONSTANTS } from "@/components/common/PaymentMethodCard/constant";
 import { NotoSansFont } from "@/styles/fonts";
 import { SITE_COLORS as c } from "@/utility/strings";
 
-const defaults = PAYMENT_METHOD_OPTION_DEFAULTS;
-const labelType = PAYMENT_TYPOGRAPHY.METHOD_LABEL;
+const defaults = PAYMENT_METHOD_CARD_CONSTANTS;
+const labelType = PAYMENT_METHOD_CARD_CONSTANTS.LABEL;
 const sans = NotoSansFont.style.fontFamily;
 
 const selectedCardStyles = css`

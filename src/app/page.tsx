@@ -1,7 +1,6 @@
-"use client";
+import { redirect } from "next/navigation";
+import { ROUTES } from "@/utility/strings";
 
-import { PageShell } from "@/components/layouts/PageShell";
-
-export default function HomePage() {
-  return <PageShell>{null}</PageShell>;
+export default function RootPage() {
+  redirect(ROUTES.HOME_DASHBOARD);
 }

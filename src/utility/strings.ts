@@ -10,6 +10,7 @@ export type LanguageCode = (typeof LANGUAGE_KEYS)[keyof typeof LANGUAGE_KEYS];
 
 export const ROUTES = {
   HOME: "/",
+  HOME_DASHBOARD: "/home",
   EXAMPLE: "/example",
   AUTH: {
     SIGN_IN: "/auth/sign-in",
@@ -124,8 +125,51 @@ export const TRANSLATION_KEYS = {
     ERROR_MESSAGES: {
       THIS_IS_REQUIRED_FIELD: "errors.thisFieldIsRequired",
     },
+    DATE_PICKER: {
+      DATE_FORMAT_PLACEHOLDER: "common.datePicker.dateFormatPlaceholder",
+      YEAR_FORMAT_PLACEHOLDER: "common.datePicker.yearFormatPlaceholder",
+    },
   },
   HOME: {
+    GREETING: "home.greeting",
+    LOADER: {
+      LABEL: "home.loader.label",
+      JOINING: "home.loader.joining",
+    },
+    HERO: {
+      TITLE: "home.hero.title",
+      DESCRIPTION: "home.hero.description",
+      BADGE: "home.hero.badge",
+      ACTION: "home.hero.action",
+    },
+    NAVIGATION: {
+      CONSULTATION_HISTORY: {
+        TITLE: "home.navigation.consultationHistory.title",
+        SUBTITLE: "home.navigation.consultationHistory.subtitle",
+      },
+      ORDERS: {
+        TITLE: "home.navigation.orders.title",
+        SUBTITLE: "home.navigation.orders.subtitle",
+      },
+    },
+    APPOINTMENTS: {
+      SECTION_TITLE: "home.appointments.sectionTitle",
+      FOR_LABEL: "home.appointments.forLabel",
+      ACTIONS: {
+        JOIN_CALL: "home.appointments.actions.joinCall",
+      },
+      DEMO: {
+        DOCTOR_NAME: "home.appointments.demo.doctorName",
+        SPECIALTY: "home.appointments.demo.specialty",
+        APPOINTMENT_TYPE: "home.appointments.demo.appointmentType",
+        PATIENT_FOR_MYSELF: "home.appointments.demo.patientForMyself",
+        PATIENT_FOR_ALEXANDER: "home.appointments.demo.patientForAlexander",
+        APPOINTMENT_TIME: "home.appointments.demo.appointmentTime",
+      },
+    },
+    FORM: {
+      DEFAULT_CONTEXT_LABEL: "home.form.defaultContextLabel",
+    },
     TITLE: "home.title",
     DESCRIPTION: "home.description",
     BUTTONS: {
@@ -134,6 +178,9 @@ export const TRANSLATION_KEYS = {
       SECONDARY: "home.buttons.secondary",
       CUSTOM: "home.buttons.custom",
     },
+  },
+  LOADER: {
+    LABEL: "loader.label",
   },
   LANGUAGE: {
     ENGLISH: "language.english",
@@ -285,7 +332,7 @@ export const TRANSLATION_KEYS = {
 } as const;
 
 export const LAYOUT_NAV_LINKS = [
-  { href: ROUTES.HOME, labelKey: TRANSLATION_KEYS.LAYOUT.NAV_HOME },
+  { href: ROUTES.HOME_DASHBOARD, labelKey: TRANSLATION_KEYS.LAYOUT.NAV_HOME },
   { href: ROUTES.EXAMPLE, labelKey: TRANSLATION_KEYS.LAYOUT.NAV_EXAMPLE },
 ] as const;
 

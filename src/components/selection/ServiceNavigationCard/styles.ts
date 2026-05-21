@@ -3,6 +3,7 @@ import {
   SERVICE_NAVIGATION_CARD_DEFAULTS,
   SERVICE_NAVIGATION_CARD_TYPOGRAPHY,
 } from "@/constants/serviceNavigationCard";
+import { ellipsisTextStyles } from "@/styles/commonStyles";
 import { NotoSansFont } from "@/styles/fonts";
 import { SITE_COLORS as c } from "@/utility/strings";
 
@@ -55,11 +56,7 @@ const TextBlock = styled.span`
 `;
 
 const EllipsisText = styled.span`
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  min-width: 0;
-  display: block;
+  ${ellipsisTextStyles}
   letter-spacing: 0;
 `;
 
